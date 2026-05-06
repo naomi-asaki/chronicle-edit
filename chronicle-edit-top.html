@@ -30,7 +30,8 @@
     background: var(--warm-white);
     color: var(--deep);
     overflow-x: hidden;
-    line-height: 1.9;
+    line-height: 2;
+    font-weight: 400;
   }
 
   /* ── NAV ── */
@@ -44,13 +45,13 @@
     align-items: center;
     background: rgba(250, 247, 242, 0.88);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(196,180,154,0.3);
+    border-bottom: 1.5px solid rgba(139,111,71,0.35);
   }
 
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.15em;
     color: var(--dark-brown);
     text-decoration: none;
@@ -59,10 +60,10 @@
   .nav-logo span {
     display: block;
     font-family: 'Noto Serif JP', serif;
-    font-size: 0.6rem;
+    font-size: 0.62rem;
     letter-spacing: 0.25em;
-    color: var(--taupe);
-    font-weight: 400;
+    color: var(--brown);
+    font-weight: 500;
     margin-top: 1px;
   }
 
@@ -74,28 +75,30 @@
   }
 
   .nav-links a {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.2em;
-    color: var(--brown);
+    color: var(--dark-brown);
     text-decoration: none;
     transition: color 0.3s;
+    font-weight: 500;
   }
 
-  .nav-links a:hover { color: var(--dark-brown); }
+  .nav-links a:hover { color: var(--deep); }
 
   .nav-cta {
-    font-size: 0.68rem !important;
+    font-size: 0.72rem !important;
     letter-spacing: 0.2em;
     padding: 0.5rem 1.2rem;
-    border: 1px solid var(--taupe);
+    border: 1.5px solid var(--brown);
     border-radius: 2px;
     color: var(--dark-brown) !important;
+    font-weight: 500 !important;
     transition: background 0.3s, border-color 0.3s !important;
   }
 
   .nav-cta:hover {
     background: var(--sand);
-    border-color: var(--brown);
+    border-color: var(--dark-brown);
   }
 
   /* ── HERO ── */
@@ -126,36 +129,39 @@
 
   .hero-content {
     position: relative;
-    max-width: 600px;
+    width: 100%;
     animation: fadeUp 1.2s ease both;
+    z-index: 2;
   }
 
   .hero-eyebrow {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 0.3em;
-    color: var(--taupe);
+    color: var(--brown);
     margin-bottom: 2.5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-weight: 500;
   }
 
   .hero-eyebrow::before {
     content: '';
     display: block;
     width: 40px;
-    height: 1px;
-    background: var(--taupe);
+    height: 1.5px;
+    background: var(--brown);
   }
 
   .hero-title {
     font-family: 'Shippori Mincho', serif;
-    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-size: clamp(1.9rem, 3.8vw, 3.8rem);
     font-weight: 500;
-    line-height: 1.55;
+    line-height: 1.7;
     color: var(--dark-brown);
     margin-bottom: 2rem;
     letter-spacing: 0.05em;
+    white-space: nowrap;
   }
 
   .hero-title em {
@@ -193,23 +199,24 @@
   .rule-accent::before, .rule-accent::after {
     content: '';
     flex: 1;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--taupe));
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown));
   }
   .rule-accent::after {
-    background: linear-gradient(to left, transparent, var(--taupe));
+    background: linear-gradient(to left, transparent, var(--brown));
   }
   .rule-accent span {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1rem;
-    color: var(--taupe);
+    color: var(--brown);
     letter-spacing: 0.3em;
   }
 
   .hero-body {
-    font-size: 0.95rem;
-    color: var(--brown);
-    line-height: 2.1;
+    font-size: 1.0rem;
+    color: var(--dark-brown);
+    font-weight: 500;
+    line-height: 2.2;
     margin-bottom: 3rem;
     max-width: 480px;
   }
@@ -241,7 +248,7 @@
   .btn-ghost {
     display: inline-block;
     padding: 0.85rem 2.2rem;
-    border: 1px solid var(--taupe);
+    border: 1.5px solid var(--brown);
     color: var(--dark-brown);
     font-size: 0.78rem;
     letter-spacing: 0.2em;
@@ -249,62 +256,33 @@
     border-radius: 2px;
     transition: border-color 0.3s, background 0.3s, transform 0.2s;
     font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
   }
 
   .btn-ghost:hover {
-    border-color: var(--brown);
+    border-color: var(--dark-brown);
     background: var(--sand);
     transform: translateY(-1px);
   }
 
   .hero-deco {
     position: absolute;
-    right: 5%;
+    right: -8%;
     top: 50%;
     transform: translateY(-50%);
-    width: 38vw;
-    max-width: 520px;
+    width: 62vw;
+    max-width: 780px;
     opacity: 0;
     animation: fadeIn 1.5s 0.5s ease forwards;
+    z-index: 1;
   }
 
   .hero-deco-inner {
     position: relative;
-    aspect-ratio: 3/4;
-    border-radius: 2px;
-    overflow: hidden;
-    background: var(--sand);
-  }
-
-  .hero-deco-frame {
-    position: absolute;
-    inset: -16px;
-    border: 1px solid var(--taupe);
-    border-radius: 2px;
-    transform: rotate(2deg);
-  }
-
-  .hero-deco-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    color: var(--taupe);
-  }
-
-  .hero-deco-placeholder svg {
-    width: 48px;
-    height: 48px;
-    opacity: 0.5;
-  }
-
-  .hero-deco-placeholder p {
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    opacity: 0.6;
+    aspect-ratio: 1/1;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
   }
 
   /* ── ABOUT INTRO ── */
@@ -317,36 +295,38 @@
   }
 
   .section-label {
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     letter-spacing: 0.4em;
-    color: var(--taupe);
+    color: var(--brown);
     margin-bottom: 2rem;
     text-transform: uppercase;
+    font-weight: 500;
   }
 
   .about-intro h2 {
     font-family: 'Shippori Mincho', serif;
     font-size: clamp(1.5rem, 3vw, 2.2rem);
-    font-weight: 500;
-    line-height: 1.8;
+    font-weight: 600;
+    line-height: 1.85;
     color: var(--dark-brown);
     margin-bottom: 2rem;
     letter-spacing: 0.05em;
   }
 
   .about-intro p {
-    font-size: 0.93rem;
-    color: var(--brown);
-    line-height: 2.2;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: var(--deep);
+    line-height: 2.3;
     text-align: left;
   }
 
   .divider {
-    width: 1px;
+    width: 1.5px;
     height: 60px;
-    background: var(--taupe);
+    background: var(--brown);
     margin: 3rem auto;
-    opacity: 0.5;
+    opacity: 0.6;
   }
 
   /* ── SERVICES ── */
@@ -360,8 +340,8 @@
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--taupe), transparent);
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown), transparent);
   }
 
   .services-header {
@@ -372,16 +352,17 @@
   .services-header h2 {
     font-family: 'Shippori Mincho', serif;
     font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--dark-brown);
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
   }
 
   .services-header p {
-    font-size: 0.85rem;
-    color: var(--taupe);
+    font-size: 0.9rem;
+    color: var(--brown);
     letter-spacing: 0.1em;
+    font-weight: 500;
   }
 
   .services-grid {
@@ -416,10 +397,10 @@
 
   .coming-soon-badge {
     display: inline-block;
-    font-size: 0.62rem;
+    font-size: 0.65rem;
     letter-spacing: 0.2em;
-    color: var(--taupe);
-    border: 1px solid var(--taupe);
+    color: var(--brown);
+    border: 1.5px solid var(--brown);
     padding: 0.3rem 0.9rem;
     border-radius: 2px;
   }
@@ -428,23 +409,24 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 3.5rem;
     font-weight: 300;
-    color: var(--sand);
+    color: var(--taupe);
     line-height: 1;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
   }
 
   .service-tag {
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     letter-spacing: 0.3em;
     color: var(--moss);
     margin-bottom: 0.8rem;
+    font-weight: 600;
   }
 
   .service-title {
     font-family: 'Shippori Mincho', serif;
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--dark-brown);
     margin-bottom: 1.2rem;
     line-height: 1.6;
@@ -452,20 +434,21 @@
   }
 
   .service-desc {
-    font-size: 0.82rem;
-    color: var(--brown);
-    line-height: 2;
+    font-size: 0.9rem;
+    color: var(--dark-brown);
+    line-height: 2.1;
     margin-bottom: 2rem;
   }
 
   .service-arrow {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.2em;
     color: var(--accent);
     transition: transform 0.3s;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    font-weight: 500;
   }
 
   .service-arrow::after {
@@ -502,7 +485,7 @@
   }
 
   .cta-banner p {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--taupe);
     margin-bottom: 2.5rem;
     line-height: 2;
@@ -532,7 +515,7 @@
     background: var(--deep);
     padding: 3rem;
     color: var(--fog);
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     letter-spacing: 0.15em;
   }
 
@@ -574,9 +557,9 @@
     text-align: center;
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.65rem;
-    color: rgba(184,176,164,0.5);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.72rem;
+    color: rgba(184,176,164,0.7);
     letter-spacing: 0.2em;
   }
 
@@ -607,6 +590,7 @@
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
     .hero { padding: 6rem 1.5rem 4rem; }
+    .hero-title { white-space: normal; font-size: clamp(1.6rem, 6vw, 2.4rem); }
     .hero-deco { display: none; }
     .about-intro { padding: 5rem 1.5rem; }
     .services { padding: 4rem 1.5rem 6rem; }
@@ -621,15 +605,15 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">
+  <a class="nav-logo" href="chronicle-edit-top.html">
     Chronicle Edit
     <span>クロニクル エディット</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#">Chronicle Editについて</a></li>
+    <li><a href="chronicle-edit-about.html">Chronicle Editについて</a></li>
     <li><a href="#">人生の物語編集会議</a></li>
-    <li><a href="#">手紙代筆</a></li>
-    <li><a href="#">自分史制作</a></li>
+    <li><a href="chronicle-edit-letter.html">手紙代筆</a></li>
+    <li><a href="chronicle-edit-jibunshi.html">自分史制作</a></li>
     <li><a href="#contact" class="nav-cta">無料相談・お問合せ</a></li>
   </ul>
 </nav>
@@ -638,19 +622,6 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-texture"></div>
-
-  <!-- 羽ペン装飾 -->
-  <svg class="feather-deco" viewBox="0 0 120 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M60 10 C60 10 100 60 95 140 C90 200 70 240 60 310" stroke="#8B6F47" stroke-width="1.5" fill="none"/>
-    <path d="M60 10 C60 10 20 60 25 140 C30 200 50 240 60 310" stroke="#8B6F47" stroke-width="1.5" fill="none"/>
-    <path d="M60 10 C80 40 90 80 85 120" stroke="#8B6F47" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <path d="M60 10 C40 40 30 80 35 120" stroke="#8B6F47" stroke-width="0.8" fill="none" opacity="0.6"/>
-    <path d="M60 40 C72 55 78 75 75 100" stroke="#8B6F47" stroke-width="0.6" fill="none" opacity="0.4"/>
-    <path d="M60 40 C48 55 42 75 45 100" stroke="#8B6F47" stroke-width="0.6" fill="none" opacity="0.4"/>
-    <path d="M60 70 C68 82 72 98 70 118" stroke="#8B6F47" stroke-width="0.5" fill="none" opacity="0.35"/>
-    <path d="M60 70 C52 82 48 98 50 118" stroke="#8B6F47" stroke-width="0.5" fill="none" opacity="0.35"/>
-    <line x1="60" y1="290" x2="60" y2="320" stroke="#8B6F47" stroke-width="1.5"/>
-  </svg>
 
   <div class="hero-content">
     <p class="hero-eyebrow">フリーライター・ライフヒストリー取材</p>
@@ -670,17 +641,71 @@
   </div>
 
   <div class="hero-deco" aria-hidden="true">
-    <div class="hero-deco-frame"></div>
     <div class="hero-deco-inner">
-      <div class="hero-deco-placeholder">
-        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="8" width="32" height="32" rx="1" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="8" y1="28" x2="40" y2="28" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="17" cy="19" r="4" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M24 28 L30 22 L40 28" stroke="currentColor" stroke-width="1.5" fill="none"/>
-        </svg>
-        <p>メインビジュアル</p>
-      </div>
+      <svg viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:100%;display:block;">
+        <defs>
+          <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#EDE8DF" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#FAF7F2" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g1" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#5A7A52" stop-opacity="0.82"/>
+            <stop offset="60%"  stop-color="#6A8A60" stop-opacity="0.38"/>
+            <stop offset="100%" stop-color="#7A9870" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g2" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#6A8A60" stop-opacity="0.62"/>
+            <stop offset="60%"  stop-color="#7A9870" stop-opacity="0.28"/>
+            <stop offset="100%" stop-color="#8AA880" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g3" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#749068" stop-opacity="0.46"/>
+            <stop offset="60%"  stop-color="#849878" stop-opacity="0.20"/>
+            <stop offset="100%" stop-color="#94A888" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g4" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#7C9870" stop-opacity="0.34"/>
+            <stop offset="60%"  stop-color="#8CA880" stop-opacity="0.14"/>
+            <stop offset="100%" stop-color="#9CB890" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g5" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#84A078" stop-opacity="0.22"/>
+            <stop offset="60%"  stop-color="#94B088" stop-opacity="0.09"/>
+            <stop offset="100%" stop-color="#A4C098" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g6" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#8CAA80" stop-opacity="0.13"/>
+            <stop offset="60%"  stop-color="#9CBA90" stop-opacity="0.05"/>
+            <stop offset="100%" stop-color="#ACCAA0" stop-opacity="0"/>
+          </radialGradient>
+          <mask id="m1"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 322 C 346 318, 356 320, 363 328 C 370 336, 372 348, 368 358 C 364 368, 354 374, 343 374 C 331 374, 320 367, 315 357 C 309 346, 311 332, 318 325 C 325 319, 335 324, 340 322 Z" fill="black"/>
+          </mask>
+          <mask id="m2"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 268 C 355 262, 374 266, 387 278 C 401 291, 407 311, 404 330 C 401 350, 389 367, 372 374 C 354 382, 332 380, 316 370 C 299 359, 290 339, 292 320 C 294 300, 308 282, 326 274 C 332 271, 337 269, 340 268 Z" fill="black"/>
+          </mask>
+          <mask id="m3"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 208 C 362 200, 390 206, 410 222 C 432 240, 444 268, 442 296 C 440 326, 424 354, 400 368 C 374 384, 341 386, 314 374 C 286 362, 268 336, 264 308 C 260 278, 272 246, 294 226 C 310 210, 328 214, 340 208 Z" fill="black"/>
+          </mask>
+          <mask id="m4"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 150 C 368 140, 402 148, 428 168 C 456 190, 472 224, 472 258 C 472 294, 456 330, 430 352 C 402 376, 364 384, 330 376 C 294 368, 262 344, 246 312 C 228 278, 230 236, 248 204 C 266 170, 302 148, 340 150 Z" fill="black"/>
+          </mask>
+          <mask id="m5"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 92 C 376 80, 420 90, 454 114 C 490 140, 514 180, 518 222 C 522 266, 506 312, 477 346 C 446 382, 400 402, 354 402 C 306 402, 260 380, 232 346 C 202 310, 194 262, 206 220 C 218 176, 248 138, 288 114 C 308 101, 326 96, 340 92 Z" fill="black"/>
+          </mask>
+          <mask id="m6"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 34 C 384 18, 438 30, 480 58 C 526 88, 558 136, 564 188 C 572 244, 553 304, 519 348 C 483 394, 430 422, 374 428 C 316 434, 256 414, 214 374 C 170 332, 150 270, 158 214 C 166 158, 200 106, 248 76 C 278 56, 310 44, 340 34 Z" fill="black"/>
+          </mask>
+        </defs>
+
+        <rect width="680" height="680" fill="url(#bg)"/>
+        <path mask="url(#m6)" d="M 340 14 C 392 0, 454 14, 504 48 C 558 84, 598 140, 608 202 C 620 268, 600 340, 562 396 C 522 454, 462 494, 396 510 C 326 528, 250 514, 192 476 C 132 436, 90 372, 76 304 C 60 232, 78 154, 118 98 C 158 40, 222 6, 290 0 C 308 -2, 326 10, 340 14 Z" fill="url(#g6)"/>
+        <path mask="url(#m5)" d="M 340 72 C 384 58, 434 70, 476 98 C 520 128, 550 176, 558 228 C 568 284, 550 346, 516 390 C 480 436, 428 464, 372 472 C 312 482, 248 466, 200 430 C 150 392, 120 336, 116 278 C 112 218, 134 158, 174 116 C 212 72, 268 54, 322 62 C 330 63, 336 71, 340 72 Z" fill="url(#g5)"/>
+        <path mask="url(#m4)" d="M 340 130 C 376 118, 418 130, 452 154 C 490 180, 514 222, 518 266 C 524 312, 508 362, 476 396 C 442 432, 394 450, 344 450 C 292 450, 242 430, 210 394 C 176 356, 162 304, 168 256 C 174 208, 198 164, 234 138 C 264 114, 306 118, 340 130 Z" fill="url(#g4)"/>
+        <path mask="url(#m3)" d="M 340 188 C 368 176, 404 186, 432 206 C 462 228, 480 262, 482 298 C 486 336, 470 376, 444 402 C 416 430, 378 444, 338 442 C 296 440, 256 424, 230 396 C 202 366, 192 326, 196 288 C 200 250, 218 214, 246 194 C 270 174, 310 182, 340 188 Z" fill="url(#g3)"/>
+        <path mask="url(#m2)" d="M 340 248 C 360 240, 386 248, 406 264 C 428 282, 440 310, 438 338 C 438 368, 424 396, 402 412 C 378 430, 347 434, 318 426 C 288 418, 264 398, 252 372 C 238 344, 240 310, 254 284 C 268 256, 296 242, 326 244 C 332 244, 337 249, 340 248 Z" fill="url(#g2)"/>
+        <path mask="url(#m1)" d="M 340 304 C 350 299, 364 302, 374 312 C 384 322, 388 338, 384 352 C 380 366, 369 376, 355 379 C 340 382, 324 377, 314 366 C 303 354, 301 337, 308 323 C 315 309, 330 306, 340 304 Z" fill="url(#g1)"/>
+      </svg>
     </div>
   </div>
 </section>
@@ -728,18 +753,18 @@
       <div class="service-title">想いを託す<br>手紙の代筆</div>
       <p class="service-desc">
         大切な人へ伝えきれなかった思いを、手紙に。
-        1,500人以上の人生を取材してきたライターが、あなたの想いを丁寧にお聞きし、言葉にまとめます。
+        1,000人以上の人生を取材してきたライターが、あなたの想いを丁寧にお聞きし、言葉にまとめます。
       </p>
       <span class="service-arrow">もっと見る</span>
     </a>
 
-    <a class="service-card" href="#">
+    <a class="service-card" href="chronicle-edit-jibunshi.html">
       <div class="service-num">03</div>
       <div class="service-tag">AUTOBIOGRAPHY</div>
       <div class="service-title">生きた証を残す<br>自分史制作</div>
       <p class="service-desc">
-        あなたの歩みを、一冊の本として残す。
-        書籍出版まで対応する、自分史の制作サービスです。
+        あなたの歩みを一冊の本として残す、自分史の制作サービスです。
+写真中心のアルバムタイプと、人生の物語を言葉で紡ぐ書籍タイプから、あなたの人生に合った残し方を。
       </p>
       <span class="service-arrow">もっと見る</span>
     </a>
@@ -763,13 +788,13 @@
   <div class="footer-inner">
     <div class="footer-logo">Chronicle Edit</div>
     <ul class="footer-nav">
-      <li><a href="#">Chronicle Editについて</a></li>
+      <li><a href="chronicle-edit-about.html">Chronicle Editについて</a></li>
       <li><a href="#">人生の物語編集会議</a></li>
-      <li><a href="#">手紙代筆</a></li>
-      <li><a href="#">自分史制作</a></li>
+      <li><a href="chronicle-edit-letter.html">手紙代筆</a></li>
+      <li><a href="chronicle-edit-jibunshi.html">自分史制作</a></li>
       <li><a href="#">個人情報保護について</a></li>
     </ul>
-    <p class="footer-copy">© 2025 Chronicle Edit. All rights reserved.</p>
+    <p class="footer-copy">© 2026 Chronicle Edit. All rights reserved.</p>
   </div>
 </footer>
 

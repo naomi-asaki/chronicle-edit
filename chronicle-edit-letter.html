@@ -30,7 +30,8 @@
     background: var(--warm-white);
     color: var(--deep);
     overflow-x: hidden;
-    line-height: 1.9;
+    line-height: 2;
+    font-weight: 400;
   }
 
   /* ── NAV ── */
@@ -44,13 +45,13 @@
     align-items: center;
     background: rgba(250, 247, 242, 0.88);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(196,180,154,0.3);
+    border-bottom: 1.5px solid rgba(139,111,71,0.35);
   }
 
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.15em;
     color: var(--dark-brown);
     text-decoration: none;
@@ -59,10 +60,10 @@
   .nav-logo span {
     display: block;
     font-family: 'Noto Serif JP', serif;
-    font-size: 0.6rem;
+    font-size: 0.62rem;
     letter-spacing: 0.25em;
-    color: var(--taupe);
-    font-weight: 400;
+    color: var(--brown);
+    font-weight: 500;
     margin-top: 1px;
   }
 
@@ -74,26 +75,28 @@
   }
 
   .nav-links a {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.2em;
-    color: var(--brown);
+    color: var(--dark-brown);
     text-decoration: none;
     transition: color 0.3s;
+    font-weight: 500;
   }
 
-  .nav-links a:hover { color: var(--dark-brown); }
-  .nav-links a.active { color: var(--dark-brown); border-bottom: 1px solid var(--taupe); padding-bottom: 2px; }
+  .nav-links a:hover { color: var(--deep); }
+  .nav-links a.active { color: var(--deep); border-bottom: 1.5px solid var(--brown); padding-bottom: 2px; }
 
   .nav-cta {
-    font-size: 0.68rem !important;
+    font-size: 0.72rem !important;
     padding: 0.5rem 1.2rem;
-    border: 1px solid var(--taupe);
+    border: 1.5px solid var(--brown);
     border-radius: 2px;
     color: var(--dark-brown) !important;
+    font-weight: 500 !important;
     transition: background 0.3s, border-color 0.3s !important;
   }
 
-  .nav-cta:hover { background: var(--sand); border-color: var(--brown); }
+  .nav-cta:hover { background: var(--sand); border-color: var(--dark-brown); }
 
   /* ── BREADCRUMB ── */
   .breadcrumb {
@@ -168,12 +171,13 @@
   }
 
   .page-lead {
-    font-size: 1rem;
-    color: var(--brown);
-    line-height: 2.2;
+    font-size: 1.1rem;
+    color: var(--dark-brown);
+    line-height: 2.3;
     max-width: 560px;
-    border-left: 2px solid var(--taupe);
+    border-left: 2.5px solid var(--brown);
     padding-left: 1.5rem;
+    font-weight: 500;
   }
 
   /* 封筒装飾SVG */
@@ -195,11 +199,12 @@
   }
 
   .section-label {
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     letter-spacing: 0.4em;
-    color: var(--taupe);
+    color: var(--brown);
     margin-bottom: 1rem;
     text-transform: uppercase;
+    font-weight: 500;
   }
 
   .rule-accent {
@@ -211,33 +216,33 @@
   .rule-accent::before, .rule-accent::after {
     content: '';
     flex: 1;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--taupe));
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown));
   }
   .rule-accent::after {
-    background: linear-gradient(to left, transparent, var(--taupe));
+    background: linear-gradient(to left, transparent, var(--brown));
   }
   .rule-accent span {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    color: var(--taupe);
+    font-size: 1.1rem;
+    color: var(--brown);
     letter-spacing: 0.3em;
   }
 
   .section h2 {
     font-family: 'Shippori Mincho', serif;
     font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--dark-brown);
     margin-bottom: 2rem;
     letter-spacing: 0.06em;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
   .section p {
-    font-size: 0.93rem;
-    color: var(--brown);
-    line-height: 2.3;
+    font-size: 1.1rem;
+    color: var(--deep);
+    line-height: 2.4;
     margin-bottom: 1.5rem;
   }
 
@@ -252,8 +257,8 @@
     content: '';
     position: absolute;
     left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--taupe), transparent);
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown), transparent);
   }
 
   .whom-section::before { top: 0; }
@@ -267,10 +272,10 @@
   .whom-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: rgba(196,180,154,0.3);
+    gap: 1.5px;
+    background: rgba(139,111,71,0.35);
     margin-top: 3rem;
-    border: 1px solid rgba(196,180,154,0.3);
+    border: 1.5px solid rgba(139,111,71,0.35);
   }
 
   .whom-item {
@@ -287,16 +292,17 @@
   .whom-icon {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
-    color: var(--taupe);
+    color: var(--brown);
     line-height: 1;
     flex-shrink: 0;
     margin-top: 2px;
   }
 
   .whom-text {
-    font-size: 0.88rem;
+    font-size: 1.1rem;
     color: var(--dark-brown);
-    line-height: 1.9;
+    line-height: 2;
+    font-weight: 500;
   }
 
   /* ── FLOW ── */
@@ -317,8 +323,8 @@
     left: 2rem;
     top: 2rem;
     bottom: 2rem;
-    width: 1px;
-    background: linear-gradient(to bottom, var(--taupe), transparent);
+    width: 1.5px;
+    background: linear-gradient(to bottom, var(--brown), transparent);
   }
 
   .flow-step {
@@ -342,7 +348,7 @@
     height: 4rem;
     border-radius: 50%;
     background: var(--warm-white);
-    border: 1px solid var(--taupe);
+    border: 1.5px solid var(--brown);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -352,14 +358,15 @@
   .flow-num-label {
     font-size: 0.5rem;
     letter-spacing: 0.15em;
-    color: var(--taupe);
+    color: var(--brown);
     line-height: 1;
+    font-weight: 600;
   }
 
   .flow-num-digit {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--dark-brown);
     line-height: 1.1;
   }
@@ -368,28 +375,29 @@
 
   .flow-title {
     font-family: 'Shippori Mincho', serif;
-    font-size: 1.05rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 600;
     color: var(--dark-brown);
     margin-bottom: 0.6rem;
     letter-spacing: 0.05em;
   }
 
   .flow-desc {
-    font-size: 0.85rem;
-    color: var(--brown);
-    line-height: 2;
+    font-size: 1.1rem;
+    color: var(--deep);
+    line-height: 2.1;
   }
 
   .flow-meta {
     display: inline-block;
-    font-size: 0.65rem;
+    font-size: 0.97rem;
     letter-spacing: 0.15em;
-    color: var(--moss);
-    border: 1px solid rgba(122,140,110,0.4);
+    color: var(--deep);
+    border: 1.5px solid rgba(122,140,110,0.5);
     padding: 0.2rem 0.7rem;
     border-radius: 2px;
     margin-top: 0.5rem;
+    font-weight: 500;
   }
 
   /* ── PRICE ── */
@@ -411,7 +419,7 @@
   .price-inner { position: relative; max-width: 560px; margin: 0 auto; }
 
   .price-label {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     letter-spacing: 0.4em;
     color: var(--taupe);
     margin-bottom: 2rem;
@@ -427,7 +435,7 @@
   }
 
   .price-tax {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     color: var(--taupe);
     letter-spacing: 0.15em;
     margin-bottom: 2rem;
@@ -435,13 +443,13 @@
 
   .price-notes {
     text-align: left;
-    border-top: 1px solid rgba(196,180,154,0.2);
+    border-top: 1.5px solid rgba(196,180,154,0.3);
     padding-top: 1.5rem;
     margin-top: 2rem;
   }
 
   .price-notes p {
-    font-size: 0.78rem;
+    font-size: 1.1rem;
     color: var(--fog);
     line-height: 2;
     letter-spacing: 0.05em;
@@ -455,13 +463,13 @@
 
   /* ── NOTE BOX ── */
   .note-box {
-    background: rgba(196,180,154,0.12);
-    border: 1px solid rgba(196,180,154,0.3);
+    background: rgba(196,180,154,0.15);
+    border: 1.5px solid rgba(139,111,71,0.3);
     border-radius: 2px;
     padding: 1.5rem 2rem;
     margin-top: 2rem;
-    font-size: 0.8rem;
-    color: var(--fog);
+    font-size: 1.1rem;
+    color: var(--dark-brown);
     line-height: 2;
     letter-spacing: 0.05em;
   }
@@ -478,14 +486,14 @@
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--taupe), transparent);
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown), transparent);
   }
 
   .cta-section h2 {
     font-family: 'Shippori Mincho', serif;
     font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 400;
+    font-weight: 500;
     color: var(--dark-brown);
     margin-bottom: 1rem;
     line-height: 1.8;
@@ -493,10 +501,10 @@
   }
 
   .cta-section p {
-    font-size: 0.88rem;
-    color: var(--brown);
+    font-size: 1.1rem;
+    color: var(--deep);
     margin-bottom: 2.5rem;
-    line-height: 2.1;
+    line-height: 2.2;
   }
 
   .btn-primary {
@@ -504,7 +512,7 @@
     padding: 0.9rem 2.8rem;
     background: var(--dark-brown);
     color: var(--cream);
-    font-size: 0.78rem;
+    font-size: 1.1rem;
     letter-spacing: 0.2em;
     text-decoration: none;
     border-radius: 2px;
@@ -522,7 +530,7 @@
     background: var(--deep);
     padding: 3rem;
     color: var(--fog);
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     letter-spacing: 0.15em;
   }
 
@@ -564,9 +572,9 @@
     text-align: center;
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.65rem;
-    color: rgba(184,176,164,0.5);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.72rem;
+    color: rgba(184,176,164,0.7);
     letter-spacing: 0.2em;
   }
 
@@ -611,10 +619,10 @@
     <span>クロニクル エディット</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#">Chronicle Editについて</a></li>
+    <li><a href="chronicle-edit-about.html">Chronicle Editについて</a></li>
     <li><a href="#">人生の物語編集会議</a></li>
-    <li><a href="#" class="active">手紙代筆</a></li>
-    <li><a href="#">自分史制作</a></li>
+    <li><a href="chronicle-edit-letter.html" class="active">手紙代筆</a></li>
+    <li><a href="ronicle-edit-jibunshi.html">自分史制作</a></li>
     <li><a href="#contact" class="nav-cta">無料相談・お問合せ</a></li>
   </ul>
 </nav>
@@ -652,7 +660,7 @@
     <p class="page-lead">
       大切な人へ。<br>
       伝えきれなかった想いを、手紙に。<br><br>
-      1,500人以上の人生を取材してきたライターが、
+      1,000人以上の人生を取材してきたライターが、
       あなたのお話を丁寧にお聞きし、
       大切な人へ届ける手紙をお書きします。
     </p>
@@ -794,7 +802,6 @@
         <p class="flow-desc">
           お手紙の完成版を、WordまたはPDF形式でお送りいたします。パソコンでの受領が難しい方は、郵送も可能です（送料別途実費）。
         </p>
-        <span class="flow-meta">個人作業</span>
       </div>
     </div>
   </div>
@@ -822,7 +829,7 @@
   <h2>まずは、無料相談から。</h2>
   <p>
     どんな小さなことでも、お気軽にご相談ください。<br>
-    あなたの想いをお聞きし、丁寧にご案内します。
+    メッセージを残すことへの想いを、丁寧におうかがいいたします。
   </p>
   <a href="mailto:" class="btn-primary">無料相談・お問合せ</a>
 </section>
@@ -832,10 +839,10 @@
   <div class="footer-inner">
     <div class="footer-logo">Chronicle Edit</div>
     <ul class="footer-nav">
-      <li><a href="#">Chronicle Editについて</a></li>
+      <li><a href="chronicle-edit-about.html">Chronicle Editについて</a></li>
       <li><a href="#">人生の物語編集会議</a></li>
-      <li><a href="#">手紙代筆</a></li>
-      <li><a href="#">自分史制作</a></li>
+      <li><a href="chronicle-edit-letter.html">手紙代筆</a></li>
+      <li><a href="ronicle-edit-jibunshi.html">自分史制作</a></li>
       <li><a href="#">個人情報保護について</a></li>
     </ul>
     <p class="footer-copy">© 2025 Chronicle Edit. All rights reserved.</p>
