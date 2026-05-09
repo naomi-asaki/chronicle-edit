@@ -269,7 +269,7 @@
   }
 
   .types-section > .sub {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: var(--brown);
     margin-bottom: 4rem;
     letter-spacing: 0.05em;
@@ -278,10 +278,81 @@
 
   .types-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2px;
     background: rgba(139,111,71,0.3);
     border: 1.5px solid rgba(139,111,71,0.3);
+    margin-bottom: 2px;
+  }
+
+  .types-grid-book {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    background: rgba(139,111,71,0.3);
+    border: 1.5px solid rgba(139,111,71,0.3);
+  }
+
+  .type-card-full {
+    grid-column: 1 / -1;
+    background: var(--warm-white);
+    padding: 3rem 2.8rem;
+    transition: background 0.3s;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .album-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .album-section-header .type-badge {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .plan-label {
+    display: inline-block;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--brown);
+    border: 1.5px solid var(--brown);
+    padding: 0.2rem 0.8rem;
+    border-radius: 2px;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+
+  .spec-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(139,111,71,0.2);
+  }
+
+  .spec-list li {
+    list-style: none;
+    font-size: 1.1rem;
+    color: var(--dark-brown);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .spec-list li::before {
+    content: '·';
+    color: var(--brown);
+    font-size: 1.2rem;
+    line-height: 1;
   }
 
   .type-card {
@@ -332,7 +403,7 @@
   }
 
   .type-card p {
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     color: var(--deep);
     line-height: 2.3;
     margin-bottom: 2rem;
@@ -342,8 +413,9 @@
   .price-block {
     background: var(--cream);
     border: 1.5px solid rgba(139,111,71,0.3);
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
     margin-bottom: 1.5rem;
+    min-width: 0;
   }
 
   .price-main {
@@ -351,21 +423,22 @@
     font-size: 1.9rem;
     font-weight: 400;
     color: var(--dark-brown);
-    letter-spacing: 0.05em;
-    line-height: 1.2;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    white-space: nowrap;
   }
 
   .price-main span {
     font-family: 'Noto Serif JP', serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--dark-brown);
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
   }
 
   .price-notes {
     margin-top: 0.8rem;
-    font-size: 0.85rem;
+    font-size: 1.0rem;
     color: var(--dark-brown);
     line-height: 2;
     letter-spacing: 0.03em;
@@ -373,7 +446,7 @@
 
   .price-notes li {
     list-style: none;
-    padding-left: 1em;
+    padding-left: 1.2em;
     position: relative;
   }
 
@@ -507,7 +580,7 @@
   }
 
   .cta-section p {
-    font-size: 0.95rem;
+    font-size: 1.25rem;
     color: var(--taupe);
     margin-bottom: 2.5rem;
     line-height: 2.1;
@@ -519,7 +592,7 @@
     padding: 0.9rem 2.8rem;
     background: var(--cream);
     color: var(--dark-brown);
-    font-size: 0.82rem;
+    font-size: 1.1rem;
     letter-spacing: 0.2em;
     text-decoration: none;
     border-radius: 2px;
@@ -610,12 +683,16 @@
     .breadcrumb, .page-hero { padding-left: 1.5rem; padding-right: 1.5rem; }
     .concept-section, .types-section, .guide-section, .mid-quote { padding: 4rem 1.5rem; }
     .types-grid { grid-template-columns: 1fr; }
+    .types-grid-book { grid-template-columns: 1fr; }
+    .type-card-full { grid-template-columns: 1fr; gap: 1.5rem; }
     .guide-grid { grid-template-columns: 1fr; }
     .cta-section { padding: 4rem 1.5rem; }
     footer { padding: 2rem 1.5rem; }
     .footer-inner { flex-direction: column; align-items: flex-start; }
     .concept-quote { padding: 1.2rem 1.5rem; }
     .types-section { max-width: 100%; }
+    .price-main { white-space: normal; font-size: 1.6rem; }
+    .album-section-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   }
 </style>
 </head>
@@ -632,7 +709,7 @@
     <li><a href="#">人生の物語編集会議</a></li>
     <li><a href="chronicle-edit-letter.html">手紙代筆</a></li>
     <li><a href="chronicle-edit-jibunshi.html" class="active">自分史制作</a></li>
-    <li><a href="#contact" class="nav-cta">無料相談・お問合せ</a></li>
+    <li><a href="chronicle-edit-contact.html" class="nav-cta">無料相談・お問合せ</a></li>
   </ul>
 </nav>
 
@@ -677,63 +754,118 @@
   <p class="section-label">Services</p>
   <div class="rule-accent"><span>✦</span></div>
   <p style="font-weight:700;color:var(--dark-brown);">あなたの人生に合った、残し方を</p>
-  <h2>２つの自分史スタイル</h2>
+  <h2>自分史のスタイルとプランを選ぶ</h2>
+
+  <!-- アルバム形式 3プラン -->
+  <div class="album-section-header">
+    <p class="type-badge">ALBUM TYPE</p>
+    <p style="font-size:1.1rem;color:var(--dark-brown);font-weight:500;letter-spacing:0.05em;">写真や年表でたどる・アルバム形式自分史ブック</p>
+  </div>
+  <p style="font-size:1.1rem;color:var(--deep);line-height:2.3;margin-bottom:2rem;">プロのライターとグラフィックデザイナーによる「自分史アルバム」。写真や年表・家系図などを楽しく盛り込みます。ご家族やお孫さんと思い出を賑やかにふり替えることができる「喜ばれる」自分史のカタチです。</p>
 
   <div class="types-grid">
 
-    <!-- アルバム形式 -->
+    <!-- プラン1：シンプルプラン -->
     <div class="type-card">
-      <p class="type-badge">ALBUM TYPE</p>
-      <h3>
-        <small>写真や年表でたどる</small>
-        アルバム形式<br>自分史ブック
-      </h3>
-      <p>プロのライターとグラフィックデザイナーによる「自分史アルバム」。文字だけでなく写真や年表・家系図など、視覚的な要素を楽しく盛り込んでまとめます。視覚的に振り返ることで、そのときの空気や感情が自然によみがえり、言葉とはまた違うかたちで、これまでの時間を受け取ることができます。</p>
-
+      <span class="plan-label">PLAN 01</span>
+      <h3>シンプルプラン</h3>
+      <p>お写真と文章がメインのシンプルなアルバム自分史。はじめての自分史づくりにも取り組みやすいプランです。</p>
       <div class="price-block">
-        <div class="price-main">198,000<span>円（税込）〜</span></div>
-        <ul class="price-notes">
-          <li>16ページ＋表紙・3部、写真枚数目安 64枚</li>
-          <li>家系図・年表はオプション各33,000円</li>
-          <li>ページ数によって料金は異なります。詳しくはお問合せください。</li>
-          <li>誌面デザインは提携パートナーと連携して行います。</li>
+        <div class="price-main">198,000<span>円（税込）</span></div>
+        <ul class="spec-list">
+          <li>16ページ</li>
+          <li>取材1回</li>
+          <li>写真約64枚</li>
+          <li>定型デザイン</li>
+          <li>印刷3冊</li>
+          <p>※家系図・年表は別料金となります。</p>
         </ul>
       </div>
-
-      <a href="#contact" class="type-link">詳しく相談する</a>
+      <a href="chronicle-edit-contact.html" class="type-link">詳しく相談する</a>
     </div>
 
-    <!-- 書籍タイプ -->
+    <!-- プラン2：デザインプラン -->
     <div class="type-card">
-      <p class="type-badge">BOOK TYPE</p>
-      <h3>
-        <small>言葉でつづる</small>
-        書籍タイプ<br>自分史
-      </h3>
-      <p>プロのライターによるインタビューをもとに、ご自身の人生をひとつの物語として丁寧に書き上げます。一人で振り返るだけでは気づけなかったことも、対話の中で少しずつ輪郭を持ちはじめます。その想いを言葉にしていくことで、ばらばらだった経験に意味が通り、自分の歩みを深く理解する時間になります。</p>
-
+      <span class="plan-label">PLAN 02</span>
+      <h3>デザインプラン</h3>
+      <p>家系図・家族年表なども盛り込んだ、読み応えのある自分史。デザインはセミオーダーで仕上げます。</p>
       <div class="price-block">
-        <div class="price-main">000,000<span>円（税込）〜</div>
-        <ul class="price-notes">
-          <li>ソフトカバーA5サイズ100p・30部、写真枚数目安 20枚</li>
-          <li>取材・執筆料、製本・印刷費の一切を含みます。</li>
-          <li>製本形態やページ数、部数によって料金は異なります。</li>
+        <div class="price-main">298,000<span>円（税込）</span></div>
+        <ul class="spec-list">
+          <li>22ページ</li>
+          <li>取材1回</li>
+          <li>写真約88枚</li>
+          <li>デザインセミオーダー</li>
+          <li>印刷3冊</li>
+          <p>※家系図・年表も含まれます。</p>
         </ul>
       </div>
+      <a href="chronicle-edit-contact.html" class="type-link">詳しく相談する</a>
+    </div>
 
-      <a href="#contact" class="type-link">詳しく相談する</a>
+    <!-- プラン3：フルオーダー -->
+    <div class="type-card">
+      <span class="plan-label">PLAN 03</span>
+      <h3>フルオーダー</h3>
+      <p>一冊丸ごとオーダーメイドで制作し、ご家族との対談などオリジナル企画にも対応。世界にひとつの自分史です。</p>
+      <div class="price-block">
+        <div class="price-main">438,000<span>円（税込）</span></div>
+        <ul class="spec-list">
+          <li>28ページ</li>
+          <li>取材2回</li>
+          <li>写真約112枚</li>
+          <li>デザインフルオーダー</li>
+          <li>印刷3冊</li>
+          <p>※こだわりの特集企画など承ります。</p>
+        </ul>
+      </div>
+      <a href="chronicle-edit-contact.html" class="type-link">詳しく相談する</a>
     </div>
 
   </div>
-</section>
 
+  <!-- 書籍タイプ -->
+  <div class="types-grid-book" style="margin-top:2rem;">
+    <div class="type-card type-card-full">
+      <div>
+        <p class="type-badge">BOOK TYPE</p>
+        <h3 style="font-size:1.5rem;">
+          <small>言葉でつづる</small>
+          書籍タイプ自分史
+        </h3>
+        <div class="price-block" style="margin-top:1.5rem;">
+          <div class="price-main">000,000<span>円（税込）〜</span></div>
+          <ul class="spec-list">
+            <li>ソフトカバーA5・100p</li>
+            <li>30部</li>
+            <li>写真約20枚</li>
+            <li>取材・執筆・製本印刷費込み</li>
+          </ul>
+        </div>
+        <a href="chronicle-edit-contact.html" class="type-link" style="margin-top:1rem;display:inline-flex;">詳しく相談する</a>
+      </div>
+      <div>
+        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">プロのライターによるインタビューをもとに、あなたの人生をひとつの物語として丁寧に綴り、一冊の書籍に仕上げます。</p>
+
+        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">一人で振り返るだけでは見えてこなかった想いや記憶も、対話を重ねる中で少しずつ輪郭を帯びていきます。うまくいかなかったでき事や、遠回りに思える時間にも、大切な意味やつながりが見えてくることがあります。</p>
+
+        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">自分史づくりは、本を残すためだけのものではありません。これまでの人生を「これでよかった」と受け取り直し、ここから先を、自分らしく歩んでいくための時間でもあります。</p>
+        <ul class="price-notes" style="margin-top:1.2rem;">
+          <li>製本形態やページ数、部数によって料金は異なります。</li>
+          <li>詳しくはぜひ、お問合せください。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
 
 <!-- GUIDE -->
 <section class="guide-section reveal">
   <div class="guide-inner">
     <p class="section-label">How to choose</p>
     <div class="rule-accent"><span>✦</span></div>
-    <h2>どちらを選べばよいか<br>迷われる方へ</h2>
+    <h2>スタイルの選び方に<br>迷われる方へ</h2>
 
     <div class="guide-grid">
       <div class="guide-item">
@@ -750,7 +882,7 @@
 <div class="mid-quote reveal">
   <div class="rule-accent"><span>✦</span></div>
   <p>
-    どちらの形式を選んでも、大切にしているのは<br>
+    どのスタイルを選んでも、大切にしているのは<br>
     「この人生でよかった」と思える証を残すことです
   </p>
   <div class="rule-accent" style="margin-top:2.5rem;margin-bottom:0;"><span>✦</span></div>
@@ -770,9 +902,9 @@
     <h2>無料相談・お問合せ</h2>
     <p>
       どんな小さなことでも、お気軽にご相談ください。<br>
-      あなたの想いをお聞きし、最適なプランをご案内します。
+      想いやご希望を丁寧におうかがいいたします。
     </p>
-    <a href="mailto:" class="btn-light">無料相談・お問合せ</a>
+    <a href="chronicle-edit-contact.html" class="btn-light">無料相談・お問合せ</a>
   </div>
 </section>
 
@@ -785,7 +917,7 @@
       <li><a href="#">人生の物語編集会議</a></li>
       <li><a href="chronicle-edit-letter.html">手紙代筆</a></li>
       <li><a href="chronicle-edit-jibunshi.html">自分史制作</a></li>
-      <li><a href="#">個人情報保護について</a></li>
+      <li><a href="chronicle-edit-privacy.html">個人情報保護について</a></li>
     </ul>
     <p class="footer-copy">© 2026 Chronicle Edit. All rights reserved.</p>
   </div>
