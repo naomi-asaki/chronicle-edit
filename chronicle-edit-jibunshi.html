@@ -255,6 +255,11 @@
   /* ── TYPES SECTION ── */
   .types-section {
     padding: 6rem 3rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .types-section-inner {
     max-width: 1000px;
     margin: 0 auto;
   }
@@ -305,16 +310,31 @@
   }
 
   .album-section-header {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
     margin-top: 3rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
   }
 
   .album-section-header .type-badge {
-    margin-bottom: 0;
-    flex-shrink: 0;
+    margin-bottom: 0.6rem;
+  }
+
+  .album-section-header h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark-brown);
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+  }
+
+  .album-section-header h3 small {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.0rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    margin-bottom: 0.4rem;
+    font-weight: 900;
   }
 
   .plan-label {
@@ -366,20 +386,22 @@
   .type-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.68rem;
-    letter-spacing: 0.3em;
-    color: var(--moss);
-    font-weight: 600;
+    gap: 0.7rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.38em;
+    color: var(--dark-brown);
+    font-weight: 400;
     margin-bottom: 1rem;
   }
 
   .type-badge::before {
     content: '';
     display: block;
-    width: 20px;
-    height: 1.5px;
-    background: var(--moss);
+    width: 24px;
+    height: 1px;
+    background: var(--dark-brown);
+    flex-shrink: 0;
   }
 
   .type-card h3 {
@@ -751,6 +773,7 @@
 
 <!-- TYPES -->
 <section class="types-section reveal" id="types">
+  <div class="types-section-inner">
   <p class="section-label">Services</p>
   <div class="rule-accent"><span>✦</span></div>
   <p style="font-weight:700;color:var(--dark-brown);">あなたの人生に合った、残し方を</p>
@@ -759,7 +782,10 @@
   <!-- アルバム形式 3プラン -->
   <div class="album-section-header">
     <p class="type-badge">ALBUM TYPE</p>
-    <p style="font-size:1.1rem;color:var(--dark-brown);font-weight:500;letter-spacing:0.05em;">写真や年表でたどる・アルバム形式自分史ブック</p>
+    <h3 style="font-size:1.5rem;">
+      <small>写真や年表でたどる</small>
+      アルバム形式自分史ブック
+    </h3>
   </div>
   <p style="font-size:1.1rem;color:var(--deep);line-height:2.3;margin-bottom:2rem;">プロのライターとグラフィックデザイナーによる「自分史アルバム」。写真や年表・家系図などを楽しく盛り込みます。ご家族やお孫さんと思い出を賑やかにふり替えることができる「喜ばれる」自分史のカタチです。</p>
 
@@ -858,6 +884,7 @@
     </div>
   </div>
 
+  </div><!-- /types-section-inner -->
 </section>
 
 <!-- GUIDE -->
