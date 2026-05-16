@@ -622,6 +622,120 @@
     .footer-inner { flex-direction: column; align-items: flex-start; }
     .concept-quote { padding: 1.2rem 1.5rem; font-size: 1.1rem; }
   }
+
+  /* ── HAMBURGER MENU ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--dark-brown);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .sp-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(250,247,242,0.97);
+    backdrop-filter: blur(12px);
+    z-index: 150;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sp-nav.open {
+    display: flex;
+    opacity: 1;
+  }
+
+  .sp-nav ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  .sp-nav ul li {
+    border-bottom: 1px solid rgba(139,111,71,0.15);
+  }
+
+  .sp-nav ul li:first-child {
+    border-top: 1px solid rgba(139,111,71,0.15);
+  }
+
+  .sp-nav ul li a {
+    display: block;
+    padding: 1.4rem 3rem;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .sp-nav ul li a:hover { color: var(--brown); }
+
+  .sp-nav .sp-nav-cta {
+    margin-top: 2rem;
+  }
+
+  .sp-nav .sp-nav-cta a {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    border: 1.5px solid var(--brown);
+    border-radius: 2px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.0rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+
+  .sp-nav .sp-nav-cta a:hover { background: var(--sand); }
+
+  .sp-nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+  }
+
+  /* スマホのみ改行 */
+  .br-sp { display: none; }
+  @media (max-width: 900px) {
+    .br-sp { display: inline; }
+  }
 </style>
 </head>
 <body>
@@ -639,7 +753,22 @@
     <li><a href="chronicle-edit-jibunshi.html">自分史制作</a></li>
     <li><a href="chronicle-edit-contact.html" class="nav-cta">無料相談・お問合せ</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="sp-nav" id="spNav">
+  <div class="sp-nav-logo">Chronicle Edit</div>
+  <ul>
+    <li><a href="chronicle-edit-about.html" style="color:var(--brown);">Chronicle Editについて</a></li>
+    <li><a href="#">人生の物語編集会議</a></li>
+    <li><a href="chronicle-edit-letter.html">手紙代筆</a></li>
+    <li><a href="chronicle-edit-jibunshi.html">自分史制作</a></li>
+  </ul>
+  <div class="sp-nav-cta">
+    <a href="chronicle-edit-contact.html">無料相談・お問合せ</a>
+  </div>
+</div>
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
@@ -680,8 +809,8 @@
     </p>
 
     <blockquote class="concept-quote">
-      大切なのは、人生を「どう過ごした」かではなく、<br>
-      過ごした日々を「どう意味づけるか」ということ。
+      大切なのは、<span class="br-sp"><br></span>人生を「どう過ごした」かではなく、<br>
+      過ごした日々を<span class="br-sp"><br></span>「どう意味づけるか」ということ。
     </blockquote>
 
     <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;margin-bottom:1.6rem;">
@@ -715,7 +844,7 @@
       <div class="profile-divider"></div>
 
       <p class="profile-career">
-        ㈱リクルートで求人広告制作、女性向け情報サイト運営会社でのコンテンツエディターを経て、フリーランスの編集者・ライターとして独立。企業取材・人物取材を中心に、1,000名超にインタビュー。さまざまな生き方や人生の転機を言葉に紡ぐ活動を重ねる。
+        ㈱リクルートで求人広告制作、女性向け情報サイト運営会社でのコンテンツエディターを経て、フリーランスの編集者・ライターとして活動後、㈱まつので広報業務などに携わり、現在は再びフリーランスとして独立。企業取材・人物取材を中心に、1,000名超にインタビュー。さまざまな生き方や人生の転機を言葉に紡ぐ活動を重ねる。
       </p>
       <p class="profile-career">
         2024年に父の最期に立ち会った経験から、人生を肯定的に振り返り「いろいろあったけれど、これでよかった」と自己価値を承認できることの大切さを実感。「人生の物語を紡ぐ」という想いを込めてChronicle Editの屋号を立ち上げる。
@@ -740,7 +869,7 @@
     <p class="section-label">Services</p>
     <div class="rule-accent"><span>✦</span></div>
     <h2 style="font-family:'Shippori Mincho',serif;font-size:clamp(1.5rem,2.8vw,2rem);font-weight:600;color:var(--dark-brown);margin-bottom:0.5rem;letter-spacing:0.06em;">
-      Chronicle Editの3つのサービス
+      Chronicle Editの<span class="br-sp"><br></span>3つのサービス
     </h2>
     <p style="font-size:0.9rem;color:var(--brown);margin-bottom:0;letter-spacing:0.08em;font-weight:500;">"これまで"と"これから"を、言葉でつなぐ</p>
 
@@ -783,8 +912,8 @@
   <div class="cta-content">
     <h2>まずは、無料相談から。</h2>
     <p>
-      どんな小さなことでも、お気軽にご相談ください。<br>
-      想いやご希望を丁寧におうかがいいたします。
+      どんな小さなことでも、<span class="br-sp"><br></span>お気軽にご相談ください。<br>
+      想いやご希望を<span class="br-sp"><br></span>丁寧にうかがいます。
     </p>
     <a href="chronicle-edit-contact.html" class="btn-light">無料相談・お問合せ</a>
   </div>
@@ -816,6 +945,23 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+</script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const spNav = document.getElementById('spNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    spNav.classList.toggle('open');
+    document.body.style.overflow = spNav.classList.contains('open') ? 'hidden' : '';
+  });
+  // リンククリックでメニューを閉じる
+  spNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      spNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
 </script>
 </body>
 </html>
