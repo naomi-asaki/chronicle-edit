@@ -400,10 +400,18 @@
     font-weight: 500;
   }
 
-  /* ── PRICE ── */
+  .flow-area {
+    font-size: 0.95rem;
+    color: var(--dark-brown);
+    line-height: 2.1;
+    margin-top: 1rem;
+    padding: 0.9rem 1.2rem;
+    background: rgba(196,180,154,0.15);
+    border-left: 2px solid rgba(139,111,71,0.35);
+  }
   .price-section {
     background: var(--dark-brown);
-    padding: 5rem 3rem;
+    padding: 3rem 3rem;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -416,29 +424,65 @@
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F5F0E8' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
-  .price-inner { position: relative; max-width: 560px; margin: 0 auto; }
+  .price-inner {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .price-plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(255,255,255,0.08);
+    margin-bottom: 2rem;
+  }
+
+  .price-plan {
+    padding: 1.8rem 2rem;
+    background: rgba(255,255,255,0.04);
+    text-align: center;
+  }
+
+  .price-plan-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    color: var(--taupe);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+
+  .price-plan-type {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--cream);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
 
   .price-label {
     font-size: 1.1rem;
     letter-spacing: 0.4em;
     color: var(--taupe);
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
   }
 
   .price-amount {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
     font-weight: 300;
     color: var(--cream);
     letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
   }
 
   .price-tax {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--taupe);
     letter-spacing: 0.15em;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
 
   .price-notes {
@@ -604,9 +648,124 @@
     .section, .flow-section { padding: 4rem 1.5rem; }
     .whom-section { padding: 4rem 1.5rem; }
     .whom-grid { grid-template-columns: 1fr; }
+    .price-plans { grid-template-columns: 1fr; }
     .price-section, .cta-section { padding: 4rem 1.5rem; }
     footer { padding: 2rem 1.5rem; }
     .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ── HAMBURGER MENU ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--dark-brown);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .sp-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(250,247,242,0.97);
+    backdrop-filter: blur(12px);
+    z-index: 150;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sp-nav.open {
+    display: flex;
+    opacity: 1;
+  }
+
+  .sp-nav ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  .sp-nav ul li {
+    border-bottom: 1px solid rgba(139,111,71,0.15);
+  }
+
+  .sp-nav ul li:first-child {
+    border-top: 1px solid rgba(139,111,71,0.15);
+  }
+
+  .sp-nav ul li a {
+    display: block;
+    padding: 1.4rem 3rem;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .sp-nav ul li a:hover { color: var(--brown); }
+
+  .sp-nav .sp-nav-cta {
+    margin-top: 2rem;
+  }
+
+  .sp-nav .sp-nav-cta a {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    border: 1.5px solid var(--brown);
+    border-radius: 2px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.0rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+
+  .sp-nav .sp-nav-cta a:hover { background: var(--sand); }
+
+  .sp-nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+  }
+
+  /* スマホのみ改行 */
+  .br-sp { display: none; }
+  @media (max-width: 900px) {
+    .br-sp { display: inline; }
   }
 </style>
 </head>
@@ -625,7 +784,22 @@
     <li><a href="chronicle-edit-jibunshi.html">自分史制作</a></li>
     <li><a href="chronicle-edit-contact.html" class="nav-cta">無料相談・お問合せ</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="sp-nav" id="spNav">
+  <div class="sp-nav-logo">Chronicle Edit</div>
+  <ul>
+    <li><a href="chronicle-edit-about.html">Chronicle Editについて</a></li>
+    <li><a href="#">人生の物語編集会議</a></li>
+    <li><a href="chronicle-edit-letter.html" style="color:var(--brown);">手紙代筆</a></li>
+    <li><a href="chronicle-edit-jibunshi.html">自分史制作</a></li>
+  </ul>
+  <div class="sp-nav-cta">
+    <a href="chronicle-edit-contact.html">無料相談・お問合せ</a>
+  </div>
+</div>
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
@@ -661,8 +835,8 @@
       大切な人へ。<br>
       伝えきれなかった想いを、手紙に。<br><br>
       1,000人以上の人生を取材してきたライターが、
-      あなたのお話を丁寧にお聞きし、
-      大切な人へ届ける手紙をお書きします。
+      想いを丁寧にお聞きし、
+      大切な人へ残す手紙にまとめます。
     </p>
   </div>
 </section>
@@ -679,7 +853,7 @@
     大切な人への「ありがとう」。伝え残しておきたい人生の教訓。これからの道のりの節目に読んでほしい言葉。将来の幸せを願う気持ち。辛くなったときに、私はいつでもここにいるよと眼差しを届けるメッセージ──。
   </p>
   <p>
-    想いを言葉にまとめていく時間は、ご自分自身と向き合う時間でもあります。大切な方たちとの、これまでの事。蘇るさまざまな想い出。あの時があったから、今の自分があると思える出来事。これまでの人生を、大切な人と一緒にもう一度たどる心の旅のような時間。その旅に、1,500人超の人生を取材してきたライターが伴走し、あなたの想いを大切にそっと手渡す言葉につむぎます。
+    想いを言葉にまとめていく時間は、ご自分自身と向き合う時間でもあります。大切な方たちとの、これまでの事。蘇るさまざまな想い出。あの時があったから、今の自分があると思える出来事。これまでの人生を、大切な人と一緒にもう一度たどる心の旅のような時間。その旅に、1,000人超の人生を取材してきたライターが伴走し、あなたの想いを大切にそっと手渡す言葉につむぎます。
   </p>
 </section>
 
@@ -701,7 +875,7 @@
       </div>
       <div class="whom-item">
         <div class="whom-icon">✉</div>
-        <div class="whom-text">今の自分があるのは、あの人のお陰。そう感謝する恩人へ。</div>
+        <div class="whom-text">今の自分があるのは、あの人のお陰。感謝する恩人へ。</div>
       </div>
       <div class="whom-item">
         <div class="whom-icon">✉</div>
@@ -709,11 +883,11 @@
       </div>
       <div class="whom-item">
         <div class="whom-icon">✉</div>
-        <div class="whom-text">長い間、会えずにいるけれど、感謝を伝えたい親友へ。</div>
+        <div class="whom-text">過去の自分へ。いまどんな言葉をかけますか。</div>
       </div>
       <div class="whom-item">
         <div class="whom-icon">✉</div>
-        <div class="whom-text">その他、大切な方への想いを手紙にしたい方。</div>
+        <div class="whom-text">未来の自分へ。どんな想いを託しますか。</div>
       </div>
     </div>
   </div>
@@ -736,7 +910,7 @@
       <div class="flow-body">
         <div class="flow-title">無料相談・ヒアリング</div>
         <p class="flow-desc">
-          「想いを託す 手紙の代筆」に関心を持っていただいたきっかけや、どなたに向けて手紙を残されたいかなどを丁寧にうかがいます。
+          「想いを託す 手紙の代筆」に関心を持っていただいたきっかけや、どなたに向けて手紙を残されたいかなどをうかがいます。
         </p>
         <span class="flow-meta">電話・オンライン</span>
       </div>
@@ -766,11 +940,14 @@
         </div>
       </div>
       <div class="flow-body">
-        <div class="flow-title">ヒアリング</div>
+        <div class="flow-title">取材</div>
         <p class="flow-desc">
-          事前シートをもとに、手紙に託したい想いやエピソードについてお話を伺います。
+          事前シートをもとに、手紙に託したい想いやエピソードをじっくりとお聴きします。ライターの伴走を通じてご自身と向き合う、大切な時間です。
         </p>
-        <span class="flow-meta">60〜90分 ／ 電話・オンライン</span>
+        <span class="flow-meta">60〜90分 ／ 対面（※）・電話・オンライン</span>
+        <p class="flow-area">
+          ※ 対面での対応は東京都・神奈川県東部・千葉県西部が対象となります。それより以遠の場合は、電話・オンラインまたは出張対応（費用別途）をご相談ください。
+        </p>
       </div>
     </div>
 
@@ -807,7 +984,7 @@
   </div>
 
   <div class="note-box">
-    ※ 便箋等への直筆での代筆は承っておりません。ご了承ください。
+    ※ 筆耕サービスではないため便箋等への直筆での代筆は承っておりません。ご了承ください。
   </div>
 </section>
 
@@ -815,11 +992,28 @@
 <section class="price-section reveal">
   <div class="price-inner">
     <p class="price-label">PRICE</p>
-    <div class="price-amount">０万００００円</div>
-    <p class="price-tax">税込</p>
+
+    <div class="price-plans">
+      <!-- オンライン -->
+      <div class="price-plan">
+        <!--<p class="price-plan-label">ONLINE</p> -->
+        <p class="price-plan-type">電話・オンライン取材</p>
+        <div class="price-amount">15,000<span style="font-size:1.4rem;letter-spacing:0.05em;">円</span></div>
+        <p class="price-tax">税込</p>
+      </div>
+      <!-- 対面 -->
+      <div class="price-plan">
+        <!--<p class="price-plan-label">IN PERSON</p> -->
+        <p class="price-plan-type">対面取材</p>
+        <div class="price-amount">20,000<span style="font-size:1.4rem;letter-spacing:0.05em;">円</span></div>
+        <p class="price-tax">税込・交通費込</p>
+      </div>
+    </div>
+
     <div class="price-notes">
-      <p>ヒアリング終了後にご入金をお願いいたします。</p>
-      <p>ご入金確認後にお手紙の原稿作成・校正へと進みます。</p>
+       <!--<p>ヒアリング終了後にご入金をお願いいたします。</p>
+      <p>ご入金確認後にお手紙の原稿作成・校正へと進みます。</p>-->
+      <p>対面対応エリア：東京都・神奈川県東部・千葉県西部。それ以遠は出張対応（費用別途）をご相談ください。</p>
     </div>
   </div>
 </section>
@@ -828,8 +1022,8 @@
 <section class="cta-section reveal" id="contact">
   <h2>まずは、無料相談から。</h2>
   <p>
-    どんな小さなことでも、お気軽にご相談ください。<br>
-    メッセージを残すことへの想いを、丁寧におうかがいいたします。
+    どんな小さなことでも、<span class="br-sp"><br></span>お気軽にご相談ください。<br>
+    メッセージを残すことへの想いを、<span class="br-sp"><br></span>丁寧にうかがいます。
   </p>
   <a href="mailto:" class="btn-primary">無料相談・お問合せ</a>
 </section>
@@ -860,6 +1054,23 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+</script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const spNav = document.getElementById('spNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    spNav.classList.toggle('open');
+    document.body.style.overflow = spNav.classList.contains('open') ? 'hidden' : '';
+  });
+  // リンククリックでメニューを閉じる
+  spNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      spNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
 </script>
 </body>
 </html>
