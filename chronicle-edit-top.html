@@ -390,19 +390,40 @@
   .services-group-label {
     font-size: 1.25rem;
     letter-spacing: 0.08em;
-    color: var(--dark-brown);
+    color: #fff;
     font-weight: 600;
-    padding: 1.5rem 2rem;
+    padding: 1.4rem 2rem;
     border-bottom: 1.5px solid rgba(139,111,71,0.15);
     line-height: 1.8;
   }
 
+  .services-group-label .label-en {
+    font-size: 0.68rem;
+    letter-spacing: 0.35em;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+  }
+
+  .services-group-label .label-en::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: rgba(255,255,255,0.4);
+    flex-shrink: 0;
+  }
+
   .services-group-left .services-group-label {
-    background: var(--cream);
+    background: var(--dark-brown);
   }
 
   .services-group-right .services-group-label {
-    background: var(--warm-white);
+    background: var(--brown);
   }
 
   .services-group-cards {
@@ -905,15 +926,18 @@
 <section class="services reveal" id="services">
   <div class="services-header">
     <p class="section-label">Services</p>
-    <h2>2つの想いに、寄り添うサービス</h2>
-    <p>未来の方向性を整えたい方にも、大切な人へ想いを残したい方にも。<span class="br-sp"><br></span>"これまで"と"これから"を、言葉でつなぐ</p>
+    <h2>2つの想いに、<span class="br-sp"><br></span>寄り添うサービス</h2>
+    <p>未来の方向性を整えたい方にも、大切な人へ想いを残したい方にも。<span class="br-sp"><br></span>"これまで"と"これから"を、<span class="br-sp"><br></span>言葉でつなぐ</p>
   </div>
 
   <div class="services-grid">
 
     <!-- 左：キャリア・人生の方向性グループ -->
     <div class="services-group services-group-left">
-      <p class="services-group-label">キャリア・人生の<br>方向性を整えたい方へ</p>
+      <p class="services-group-label">
+        <span class="label-en">CAREER &amp; LIFE</span>
+        人生の経験を整理し<br>今後の生き方を整えたい方へ
+      </p>
       <div class="services-group-cards">
         <div class="service-card coming-soon">
           <div class="service-num">01</div>
@@ -930,7 +954,10 @@
 
     <!-- 右：想いを残したい方グループ -->
     <div class="services-group services-group-right">
-      <p class="services-group-label">人生を振り返り、<br>大切な人へ想いを残したい方へ</p>
+      <p class="services-group-label">
+        <span class="label-en">FOR YOUR LOVED ONES</span>
+        人生を振り返り、家族や<br>大切な人へ想いを残したい方へ
+      </p>
       <div class="services-group-cards">
         <a class="service-card" href="chronicle-edit-letter.html">
           <div class="service-num">02</div>
