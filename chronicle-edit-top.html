@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-48R2VDMKB6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-48R2VDMKB6');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chronicle Edit | 人生の物語を言葉に</title>
@@ -367,10 +375,46 @@
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
     max-width: 1100px;
     margin: 0 auto;
+  }
+
+  .services-group {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid rgba(139,111,71,0.2);
+  }
+
+  .services-group-label {
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+    color: var(--dark-brown);
+    font-weight: 600;
+    padding: 1.5rem 2rem;
+    border-bottom: 1.5px solid rgba(139,111,71,0.15);
+    line-height: 1.8;
+  }
+
+  .services-group-left .services-group-label {
+    background: var(--cream);
+  }
+
+  .services-group-right .services-group-label {
+    background: var(--warm-white);
+  }
+
+  .services-group-cards {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2px;
+    background: rgba(139,111,71,0.15);
+  }
+
+  .services-group-right .services-group-cards {
+    flex-direction: row;
   }
 
   .service-card {
@@ -594,7 +638,8 @@
     .hero-deco { display: none; }
     .about-intro { padding: 5rem 1.5rem; }
     .services { padding: 4rem 1.5rem 6rem; }
-    .services-grid { grid-template-columns: 1fr; gap: 2px; }
+    .services-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .services-group-right .services-group-cards { flex-direction: column; }
     .cta-banner { padding: 4rem 1.5rem; }
     footer { padding: 2rem 1.5rem; }
     .footer-inner { flex-direction: column; align-items: flex-start; }
@@ -845,8 +890,8 @@
   <div class="rule-accent"><span>✦</span></div>
   <h2>
     1,000人超の人生を取材した<span class="br-sp"><br></span>ライターが<br>
-    「聴く」ことで伴走し、<br>
-    ご自身の人生の物語を<br>「言葉」につむぎます。
+    聴くことで伴走し、<br>
+    「人生の物語」を言葉につむぎます。
   </h2>
   <div class="divider"></div>
   <p>
@@ -860,43 +905,57 @@
 <section class="services reveal" id="services">
   <div class="services-header">
     <p class="section-label">Services</p>
-    <h2>3つのサービス</h2>
-    <p>"これまで"と"これから"を、<span class="br-sp"><br></span>言葉でつなぐ</p>
+    <h2>2つの想いに、寄り添うサービス</h2>
+    <p>未来の方向性を整えたい方にも、大切な人へ想いを残したい方にも。<span class="br-sp"><br></span>"これまで"と"これから"を、言葉でつなぐ</p>
   </div>
 
   <div class="services-grid">
-    <div class="service-card coming-soon">
-      <div class="service-num">01</div>
-      <div class="service-tag">LIFE STORY SESSION</div>
-      <div class="service-title">人生の物語<br>編集会議</div>
-      <p class="service-desc">
-        人生の転機や節目に、過去を振り返り「生きる軸」を言葉で確かめる全2回のセッションです。
-        1,000人超の人生を取材したライターが伴走します。
-      </p>
-      <span class="coming-soon-badge">サービス準備中</span>
+
+    <!-- 左：キャリア・人生の方向性グループ -->
+    <div class="services-group services-group-left">
+      <p class="services-group-label">キャリア・人生の<br>方向性を整えたい方へ</p>
+      <div class="services-group-cards">
+        <div class="service-card coming-soon">
+          <div class="service-num">01</div>
+          <div class="service-tag">LIFE STORY SESSION</div>
+          <div class="service-title">人生の物語<br>編集会議</div>
+          <p class="service-desc">
+            人生の転機や節目に、過去を振り返り「生きる軸」を言葉で確かめる全2回のセッションです。
+            1,000人超の人生を取材したライターが伴走します。
+          </p>
+          <span class="coming-soon-badge">サービス準備中</span>
+        </div>
+      </div>
     </div>
 
-    <a class="service-card" href="chronicle-edit-letter.html">
-      <div class="service-num">02</div>
-      <div class="service-tag">LETTER WRITING</div>
-      <div class="service-title">想いを託す<br>手紙の代筆</div>
-      <p class="service-desc">
-        大切な人へ伝えきれなかった思いを、手紙に。
-        一人では言葉にしにくい想いを時間をかけて丁寧にお聞きし、メッセージにまとめます。
-      </p>
-      <span class="service-arrow">もっと見る</span>
-    </a>
+    <!-- 右：想いを残したい方グループ -->
+    <div class="services-group services-group-right">
+      <p class="services-group-label">人生を振り返り、<br>大切な人へ想いを残したい方へ</p>
+      <div class="services-group-cards">
+        <a class="service-card" href="chronicle-edit-letter.html">
+          <div class="service-num">02</div>
+          <div class="service-tag">LETTER WRITING</div>
+          <div class="service-title">想いを託す<br>手紙の代筆</div>
+          <p class="service-desc">
+            大切な人へ伝えきれなかった思いを、手紙に。
+            一人では言葉にしにくい想いを時間をかけて丁寧にお聞きし、メッセージにまとめます。
+          </p>
+          <span class="service-arrow">作成の流れ・料金について</span>
+        </a>
 
-    <a class="service-card" href="chronicle-edit-jibunshi.html">
-      <div class="service-num">03</div>
-      <div class="service-tag">AUTOBIOGRAPHY</div>
-      <div class="service-title">生きた証を残す<br>自分史制作</div>
-      <p class="service-desc">
-        これまでの歩みを一冊の本として残す、自分史の制作サービスです。
-写真中心のアルバムタイプと、言葉で紡ぐ書籍タイプから、ご自身の人生に合った残し方を。
-      </p>
-      <span class="service-arrow">もっと見る</span>
-    </a>
+        <a class="service-card" href="chronicle-edit-jibunshi.html">
+          <div class="service-num">03</div>
+          <div class="service-tag">AUTOBIOGRAPHY</div>
+          <div class="service-title">生きた証を残す<br>自分史制作</div>
+          <p class="service-desc">
+            これまでの歩みを一冊の本として残す、自分史の制作サービスです。
+            写真中心のアルバムタイプと、言葉で紡ぐ書籍タイプから、ご自身の人生に合った残し方を。
+          </p>
+          <span class="service-arrow">作成の流れ・料金について</span>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
