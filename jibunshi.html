@@ -581,6 +581,110 @@
     letter-spacing: 0.06em;
   }
 
+  /* ── FLOW ── */
+  .flow-section {
+    padding: 5rem 3rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .flow-steps {
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  .flow-steps::before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    bottom: 2rem;
+    width: 1.5px;
+    background: linear-gradient(to bottom, var(--brown), transparent);
+  }
+
+  .flow-step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .flow-step:last-child { margin-bottom: 0; }
+
+  .flow-num {
+    width: 4rem;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .flow-num-inner {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: var(--warm-white);
+    border: 1.5px solid var(--brown);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flow-num-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+    color: var(--brown);
+    line-height: 1;
+    font-weight: 600;
+  }
+
+  .flow-num-digit {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--dark-brown);
+    line-height: 1.1;
+  }
+
+  .flow-body { padding-top: 0.8rem; }
+
+  .flow-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.05em;
+  }
+
+  .flow-desc {
+    font-size: 1.1rem;
+    color: var(--deep);
+    line-height: 2.1;
+  }
+
+  .flow-meta {
+    display: inline-block;
+    font-size: 0.97rem;
+    letter-spacing: 0.15em;
+    color: var(--deep);
+    border: 1.5px solid rgba(122,140,110,0.5);
+    padding: 0.2rem 0.7rem;
+    border-radius: 2px;
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  .flow-area {
+    font-size: 0.95rem;
+    color: var(--dark-brown);
+    line-height: 2.1;
+    margin-top: 1rem;
+    padding: 0.9rem 1.2rem;
+    background: rgba(196,180,154,0.15);
+    border-left: 2px solid rgba(139,111,71,0.35);
+  }
+
   /* ── CTA ── */
   .cta-section {
     padding: 6rem 3rem;
@@ -1001,10 +1105,10 @@
           書籍タイプ自分史
         </h3>
         <div class="price-block" style="margin-top:1.5rem;">
-          <div class="price-main">220,000<span>円（税込）〜</span></div>
+          <div class="price-main">250,000<span>円（税込）〜</span></div>
           <ul class="spec-list">
             <li>ソフトカバーB6サイズ・100ページ（1万5000字相当）</li>
-            <li>3部</li>
+            <li>印刷：3部</li>
             <li>写真約20枚</li>
             <li>取材・執筆・製本印刷費込み</li>
           </ul>
@@ -1062,6 +1166,116 @@
       まずは、お気軽にお問合せください。<br>
       これまでの人生を振り返りまとめることへの想いを、丁寧におうかがいいたします。
     </p>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow-section reveal">
+  <p class="section-label">Flow</p>
+  <div class="rule-accent"><span>✦</span></div>
+  <h2>自分史制作の流れ</h2>
+
+  <div class="flow-steps">
+
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">01</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">無料相談</div>
+        <p class="flow-desc">
+          自分史制作に関心を持っていただいたきっかけや思い、ご不安なことなどを丁寧にうかがいます。
+        </p>
+        <span class="flow-meta">電話・オンライン</span>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">02</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">事前シート記入・写真ご準備</div>
+        <p class="flow-desc">
+          これまでの人生を振り返る準備として、簡単な事前シートにご記入いただきます。参考資料等ございましたら、あわせてご準備ください。自分史に掲載したい写真の選定・ご用意もお願いいたします。迷われる場合には、インタビューにお伺いした際に、一緒に選定させていただきます。
+        </p>
+        <!-- <span class="flow-meta">個人作業</span> -->
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">03</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">インタビュー</div>
+        <p class="flow-desc">
+          ライターによるインタビューを通じて、これまでの人生の歩みをふり返っていただくお時間です。時間制限は設けず、1日1組限定で丁寧にお話をうかがいます。目安として、最低３時間以上をご予定ください。ご体調やご都合を確認させていただきながら、ご無理のない進行をさせていただきます。
+        </p>
+        <span class="flow-meta">対面（※）・電話・オンライン</span>
+        <p class="flow-area">
+          ※ 対面での対応は東京都・神奈川県東部・千葉県西部が対象となります。それ以遠の場合は、電話・オンラインまたは出張対応（費用別途）をご相談ください。
+        </p>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">04</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">執筆・編集</div>
+        <p class="flow-desc">
+          うかがったお話をもとに、文章・誌面レイアウト作成を行います。丁寧に作成させていただくために、約６週間の制作期間をいただいております（お急ぎの場合は、別途ご相談ください）。
+        </p>
+        <span class="flow-meta">制作期間：約６週間</span>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">05</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">原稿ご確認</div>
+        <p class="flow-desc">
+          印刷前に原稿内容・誌面レイアウトのご確認をいただきます。
+        </p>
+        <!-- <span class="flow-meta">個人作業</span> -->
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">06</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">印刷・製本・ご納品</div>
+        <p class="flow-desc">
+          アルバムはハードカバータイプの高級感ある仕上がりを採用しています。書籍タイプはご予算に応じてソフトカバー、ハードカバーいずれにも対応しております。お打ち合わせ時の仕様・体裁に基づいて印刷・製本し、ご納品させていただきます。
+        </p>
+        <span class="flow-meta">ご確認終了後、約２週間</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
