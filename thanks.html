@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問合せありがとうございます | Chronicle Edit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-48R2VDMKB6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-48R2VDMKB6');
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F5F0E8;
+    --warm-white: #FAF7F2;
+    --sand: #E8DFD0;
+    --taupe: #C4B49A;
+    --brown: #8B6F47;
+    --dark-brown: #4A3728;
+    --deep: #2C2018;
+    --moss: #7A8C6E;
+    --fog: #B8B0A4;
+    --accent: #A67C52;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif JP', serif;
+    background: var(--warm-white);
+    color: var(--deep);
+    overflow-x: hidden;
+    line-height: 2;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1.5px solid rgba(139,111,71,0.35);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: var(--dark-brown);
+    text-decoration: none;
+  }
+
+  .nav-logo span {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    color: var(--brown);
+    font-weight: 500;
+    margin-top: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover { color: var(--deep); }
+
+  .nav-cta {
+    font-size: 0.72rem !important;
+    padding: 0.5rem 1.2rem;
+    border: 1.5px solid var(--brown);
+    border-radius: 2px;
+    color: var(--dark-brown) !important;
+    font-weight: 500 !important;
+    transition: background 0.3s, border-color 0.3s !important;
+  }
+
+  .nav-cta:hover { background: var(--sand); border-color: var(--dark-brown); }
+
+  /* ── HAMBURGER ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--dark-brown);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .sp-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(250,247,242,0.97);
+    backdrop-filter: blur(12px);
+    z-index: 150;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sp-nav.open { display: flex; opacity: 1; }
+  .sp-nav ul { list-style: none; text-align: center; }
+  .sp-nav ul li { border-bottom: 1px solid rgba(139,111,71,0.15); }
+  .sp-nav ul li:first-child { border-top: 1px solid rgba(139,111,71,0.15); }
+  .sp-nav ul li a {
+    display: block;
+    padding: 1.4rem 3rem;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .sp-nav ul li a:hover { color: var(--brown); }
+  .sp-nav .sp-nav-cta { margin-top: 2rem; }
+  .sp-nav .sp-nav-cta a {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    border: 1.5px solid var(--brown);
+    border-radius: 2px;
+    font-size: 1.0rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  .sp-nav .sp-nav-cta a:hover { background: var(--sand); }
+  .sp-nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+  }
+
+  /* ── MAIN ── */
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 3rem 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .main-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 70% at 70% 50%, rgba(139,111,71,0.08) 0%, transparent 70%), var(--warm-white);
+  }
+
+  .main-texture {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      0deg, transparent, transparent 38px,
+      rgba(139,111,71,0.04) 38px, rgba(139,111,71,0.04) 39px
+    );
+  }
+
+  .thanks-content {
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+    animation: fadeUp 1s ease both;
+  }
+
+  .thanks-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.0rem;
+    color: var(--brown);
+    letter-spacing: 0.15em;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .rule-accent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .rule-accent::before, .rule-accent::after {
+    content: '';
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown));
+  }
+  .rule-accent::after { background: linear-gradient(to left, transparent, var(--brown)); }
+  .rule-accent span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--brown);
+    letter-spacing: 0.3em;
+  }
+
+  .thanks-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 500;
+    color: var(--dark-brown);
+    line-height: 1.7;
+    letter-spacing: 0.06em;
+    margin-bottom: 2rem;
+  }
+
+  .thanks-message {
+    font-size: 1.1rem;
+    color: var(--deep);
+    line-height: 2.4;
+    margin-bottom: 3rem;
+  }
+
+  .divider {
+    width: 1.5px;
+    height: 50px;
+    background: var(--brown);
+    margin: 0 auto 3rem;
+    opacity: 0.5;
+  }
+
+  .btn-ghost {
+    display: inline-block;
+    padding: 0.85rem 2.5rem;
+    border: 1.5px solid var(--brown);
+    color: var(--dark-brown);
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: border-color 0.3s, background 0.3s, transform 0.2s;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--dark-brown);
+    background: var(--sand);
+    transform: translateY(-1px);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--deep);
+    padding: 3rem;
+    color: var(--fog);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: 0.2em;
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  .footer-nav a {
+    color: var(--fog);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-nav a:hover { color: var(--cream); }
+
+  .footer-copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.72rem;
+    color: rgba(184,176,164,0.7);
+    letter-spacing: 0.2em;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 900px) {
+    main { padding: 7rem 1.5rem 5rem; }
+    footer { padding: 2rem 1.5rem; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    Chronicle Edit
+    <span>クロニクル エディット</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">Chronicle Editについて</a></li>
+    <li><span class="nav-coming-soon">人生の物語編集会議<span class="nav-coming-badge">準備中</span></span></li>
+    <li><a href="letter.html">人生をつづる手紙</a></li>
+    <li><a href="jibunshi.html">自分史制作</a></li>
+    <li><a href="contact.html" class="nav-cta">無料相談・お問合せ</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="sp-nav" id="spNav">
+  <div class="sp-nav-logo">Chronicle Edit</div>
+  <ul>
+    <li><a href="about.html">Chronicle Editについて</a></li>
+    <li><span class="nav-coming-soon">人生の物語編集会議<span class="nav-coming-badge">準備中</span></span></li>
+    <li><a href="letter.html">人生をつづる手紙</a></li>
+    <li><a href="jibunshi.html">自分史制作</a></li>
+  </ul>
+  <div class="sp-nav-cta">
+    <a href="contact.html">無料相談・お問合せ</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <div class="main-bg"></div>
+  <div class="main-texture"></div>
+  <div class="thanks-content">
+    <span class="thanks-eyebrow">thank you</span>
+    <div class="rule-accent"><span>✦</span></div>
+    <h1 class="thanks-title">
+      お問合せをいただき、<br>ありがとうございます。
+    </h1>
+    <p class="thanks-message">
+      平日3日以内にご返信いたします。<br>
+      いましばらくお待ちください。
+    </p>
+    <div class="divider"></div>
+    <a href="index.html" class="btn-ghost">トップページへ戻る</a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Chronicle Edit</div>
+    <ul class="footer-nav">
+      <li><a href="about.html">Chronicle Editについて</a></li>
+      <li><span class="nav-coming-soon">人生の物語編集会議<span class="nav-coming-badge">準備中</span></span></li>
+      <li><a href="letter.html">人生をつづる手紙</a></li>
+      <li><a href="jibunshi.html">自分史制作</a></li>
+      <li><a href="privacy.html">個人情報保護について</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Chronicle Edit. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const spNav = document.getElementById('spNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    spNav.classList.toggle('open');
+    document.body.style.overflow = spNav.classList.contains('open') ? 'hidden' : '';
+  });
+  spNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      spNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
+</body>
+</html>
