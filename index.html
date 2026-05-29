@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-48R2VDMKB6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-48R2VDMKB6');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chronicle Edit | 人生の物語を言葉に</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F5F0E8;
+    --warm-white: #FAF7F2;
+    --sand: #E8DFD0;
+    --taupe: #C4B49A;
+    --brown: #8B6F47;
+    --dark-brown: #4A3728;
+    --deep: #2C2018;
+    --moss: #7A8C6E;
+    --fog: #B8B0A4;
+    --accent: #A67C52;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif JP', serif;
+    background: var(--warm-white);
+    color: var(--deep);
+    overflow-x: hidden;
+    line-height: 2;
+    font-weight: 400;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(250, 247, 242, 0.88);
+    backdrop-filter: blur(8px);
+    border-bottom: 1.5px solid rgba(139,111,71,0.35);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: var(--dark-brown);
+    text-decoration: none;
+  }
+
+  .nav-logo span {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    color: var(--brown);
+    font-weight: 500;
+    margin-top: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover { color: var(--deep); }
+
+  .nav-cta {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.2em;
+    padding: 0.5rem 1.2rem;
+    border: 1.5px solid var(--brown);
+    border-radius: 2px;
+    color: var(--dark-brown) !important;
+    font-weight: 500 !important;
+    transition: background 0.3s, border-color 0.3s !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--sand);
+    border-color: var(--dark-brown);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8rem 3rem 5rem;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 80% 50%, rgba(196,180,154,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 80% at 10% 80%, rgba(122,140,110,0.08) 0%, transparent 60%),
+      var(--warm-white);
+  }
+
+  .hero-texture {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C4B49A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .hero-content {
+    position: relative;
+    width: 100%;
+    animation: fadeUp 1.2s ease both;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--brown);
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1.5px;
+    background: var(--brown);
+  }
+
+  .hero-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.9rem, 3.8vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--dark-brown);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--accent);
+    position: relative;
+  }
+
+  .handwritten {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--taupe);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 1.8rem;
+  }
+
+  .feather-deco {
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+    width: 200px;
+    opacity: 0.1;
+    transform: rotate(-18deg);
+    pointer-events: none;
+  }
+
+  .rule-accent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .rule-accent::before, .rule-accent::after {
+    content: '';
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown));
+  }
+  .rule-accent::after {
+    background: linear-gradient(to left, transparent, var(--brown));
+  }
+  .rule-accent span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--brown);
+    letter-spacing: 0.3em;
+  }
+
+  .hero-body {
+    font-size: 1.25rem;
+    color: var(--dark-brown);
+    font-weight: 500;
+    line-height: 2.2;
+    margin-bottom: 3rem;
+    max-width: 480px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 1.1rem 2.2rem;
+    background: var(--dark-brown);
+    color: var(--cream);
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.3s, transform 0.2s;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .btn-primary:hover {
+    background: var(--deep);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    display: inline-block;
+    padding: 1.1rem 2.2rem;
+    border: 1.5px solid var(--brown);
+    color: var(--dark-brown);
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: border-color 0.3s, background 0.3s, transform 0.2s;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--dark-brown);
+    background: var(--sand);
+    transform: translateY(-1px);
+  }
+
+  .hero-deco {
+    position: absolute;
+    right: -8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 62vw;
+    max-width: 780px;
+    opacity: 0;
+    animation: fadeIn 1.5s 0.5s ease forwards;
+    z-index: 1;
+  }
+
+  .hero-deco-inner {
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+  }
+
+  /* ── ABOUT INTRO ── */
+  .about-intro {
+    padding: 7rem 3rem;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeUp 1s ease both;
+  }
+
+  .section-label {
+    font-size: 1.25rem;
+    letter-spacing: 0.4em;
+    color: var(--dark-brown);
+    margin-bottom: 2rem;
+    text-transform: none;
+    font-weight: 500;
+  }
+
+  .about-intro h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 600;
+    line-height: 1.85;
+    color: var(--dark-brown);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .about-intro p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--deep);
+    line-height: 2.3;
+    text-align: left;
+  }
+
+  .divider {
+    width: 1.5px;
+    height: 60px;
+    background: var(--brown);
+    margin: 3rem auto;
+    opacity: 0.6;
+  }
+
+  /* ── SERVICES ── */
+  .services {
+    padding: 5rem 3rem 8rem;
+    background: var(--cream);
+    position: relative;
+  }
+
+  .services::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown), transparent);
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .services-header h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--dark-brown);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .services-header p {
+    font-size: 1.25rem;
+    color: var(--brown);
+    letter-spacing: 0.1em;
+    font-weight: 500;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .services-group {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid rgba(139,111,71,0.2);
+  }
+
+  .services-group-label {
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+    color: #fff;
+    font-weight: 600;
+    padding: 1.4rem 2rem;
+    border-bottom: 1.5px solid rgba(139,111,71,0.15);
+    line-height: 1.8;
+  }
+
+  .services-group-label .label-en {
+    font-size: 0.68rem;
+    letter-spacing: 0.35em;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+  }
+
+  .services-group-label .label-en::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: rgba(255,255,255,0.4);
+    flex-shrink: 0;
+  }
+
+  .services-group-left .services-group-label {
+    background: var(--dark-brown);
+  }
+
+  .services-group-right .services-group-label {
+    background: var(--brown);
+  }
+
+  .services-group-cards {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2px;
+    background: rgba(139,111,71,0.15);
+  }
+
+  .services-group-right .services-group-cards {
+    flex-direction: row;
+  }
+
+  .service-card {
+    background: var(--warm-white);
+    padding: 3rem 2.5rem;
+    position: relative;
+    transition: background 0.4s;
+    text-decoration: none;
+    display: block;
+  }
+
+  .service-card:hover {
+    background: #fff;
+  }
+
+  .service-card:hover .service-arrow {
+    transform: translateX(4px);
+  }
+
+  .service-card.coming-soon {
+    pointer-events: none;
+    opacity: 0.65;
+  }
+
+  .coming-soon-badge {
+    display: inline-block;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    color: var(--brown);
+    border: 1.5px solid var(--brown);
+    padding: 0.3rem 0.9rem;
+    border-radius: 2px;
+  }
+
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--brown);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .service-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    color: var(--moss);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+
+  .service-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+  }
+
+  .service-desc {
+    font-size: 1.1rem;
+    color: var(--dark-brown);
+    line-height: 2.1;
+    margin-bottom: 2rem;
+  }
+
+  .service-arrow {
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    transition: transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+  }
+
+  .service-arrow::after {
+    content: '→';
+    font-size: 1rem;
+  }
+
+  /* ── CTA BANNER ── */
+  .cta-banner {
+    padding: 6rem 3rem;
+    text-align: center;
+    background: var(--dark-brown);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F5F0E8' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .cta-banner-content { position: relative; }
+
+  .cta-banner h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+  }
+
+  .cta-banner p {
+    font-size: 1.25rem;
+    color: var(--taupe);
+    margin-bottom: 2.5rem;
+    line-height: 2;
+    letter-spacing: 0.05em;
+  }
+
+  .btn-light {
+    display: inline-block;
+    padding: 0.9rem 2.8rem;
+    background: var(--cream);
+    color: var(--dark-brown);
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.3s, transform 0.2s;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .btn-light:hover {
+    background: var(--warm-white);
+    transform: translateY(-1px);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--deep);
+    padding: 3rem;
+    color: var(--fog);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: 0.2em;
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  .footer-nav a {
+    color: var(--fog);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-nav a:hover { color: var(--cream); }
+
+  .footer-copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.72rem;
+    color: rgba(184,176,164,0.7);
+    letter-spacing: 0.2em;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { padding: 6rem 1.5rem 4rem; }
+    .hero-title { white-space: normal; font-size: clamp(1.6rem, 6vw, 2.4rem); }
+    .hero-deco { display: none; }
+    .about-intro { padding: 5rem 1.5rem; }
+    .services { padding: 4rem 1.5rem 6rem; }
+    .services-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .services-group-right .services-group-cards { flex-direction: column; }
+    .cta-banner { padding: 4rem 1.5rem; }
+    footer { padding: 2rem 1.5rem; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ── HAMBURGER MENU ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--dark-brown);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .sp-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(250,247,242,0.97);
+    backdrop-filter: blur(12px);
+    z-index: 150;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sp-nav.open {
+    display: flex;
+    opacity: 1;
+  }
+
+  .sp-nav ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  .sp-nav ul li {
+    border-bottom: 1px solid rgba(139,111,71,0.15);
+  }
+
+  .sp-nav ul li:first-child {
+    border-top: 1px solid rgba(139,111,71,0.15);
+  }
+
+  .sp-nav ul li a {
+    display: block;
+    padding: 1.4rem 3rem;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .sp-nav ul li a:hover { color: var(--brown); }
+
+  .sp-nav .sp-nav-cta {
+    margin-top: 2rem;
+  }
+
+  .sp-nav .sp-nav-cta a {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    border: 1.5px solid var(--brown);
+    border-radius: 2px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.0rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+
+  .sp-nav .sp-nav-cta a:hover { background: var(--sand); }
+
+  .sp-nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+  }
+
+  /* スマホのみ改行 */
+  .br-sp { display: none; }
+  @media (max-width: 900px) {
+    .br-sp { display: inline; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="chronicle-edit-top.html">
+    Chronicle Edit
+    <span>クロニクル エディット</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="chronicle-edit-about.html">Chronicle Editについて</a></li>
+    <li><a href="#">人生の物語編集会議</a></li>
+    <li><a href="chronicle-edit-letter.html">人生をつづる手紙</a></li>
+    <li><a href="chronicle-edit-jibunshi.html">自分史制作</a></li>
+    <li><a href="chronicle-edit-contact.html" class="nav-cta">無料相談・お問合せ</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="sp-nav" id="spNav">
+  <div class="sp-nav-logo">Chronicle Edit</div>
+  <ul>
+    <li><a href="chronicle-edit-about.html">Chronicle Editについて</a></li>
+    <li><a href="#">人生の物語編集会議</a></li>
+    <li><a href="chronicle-edit-letter.html">人生をつづる手紙</a></li>
+    <li><a href="chronicle-edit-jibunshi.html">自分史制作</a></li>
+  </ul>
+  <div class="sp-nav-cta">
+    <a href="chronicle-edit-contact.html">無料相談・お問合せ</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-texture"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">フリーライター・ライフヒストリー取材</p>
+    <span class="handwritten">life writing service</span>
+    <h1 class="hero-title">
+      この生き方で、よかった。<br>
+      そう思える人生のために
+    </h1>
+    <p class="hero-body">
+      自分に正直に、生きてきただろうか。あのときの選択は、これでよかったのだろうか。
+      歩んできた道をふり返ることで見えてくる、人生の意味があります。
+    </p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">サービスを見る</a>
+      <a href="chronicle-edit-contact.html" class="btn-ghost">無料相談はこちら</a>
+    </div>
+  </div>
+
+  <div class="hero-deco" aria-hidden="true">
+    <div class="hero-deco-inner">
+      <svg viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:100%;display:block;">
+        <defs>
+          <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#EDE8DF" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#FAF7F2" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g1" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#5A7A52" stop-opacity="0.82"/>
+            <stop offset="60%"  stop-color="#6A8A60" stop-opacity="0.38"/>
+            <stop offset="100%" stop-color="#7A9870" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g2" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#6A8A60" stop-opacity="0.62"/>
+            <stop offset="60%"  stop-color="#7A9870" stop-opacity="0.28"/>
+            <stop offset="100%" stop-color="#8AA880" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g3" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#749068" stop-opacity="0.46"/>
+            <stop offset="60%"  stop-color="#849878" stop-opacity="0.20"/>
+            <stop offset="100%" stop-color="#94A888" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g4" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#7C9870" stop-opacity="0.34"/>
+            <stop offset="60%"  stop-color="#8CA880" stop-opacity="0.14"/>
+            <stop offset="100%" stop-color="#9CB890" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g5" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#84A078" stop-opacity="0.22"/>
+            <stop offset="60%"  stop-color="#94B088" stop-opacity="0.09"/>
+            <stop offset="100%" stop-color="#A4C098" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g6" cx="32%" cy="68%" r="60%">
+            <stop offset="0%"   stop-color="#8CAA80" stop-opacity="0.13"/>
+            <stop offset="60%"  stop-color="#9CBA90" stop-opacity="0.05"/>
+            <stop offset="100%" stop-color="#ACCAA0" stop-opacity="0"/>
+          </radialGradient>
+          <mask id="m1"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 322 C 346 318, 356 320, 363 328 C 370 336, 372 348, 368 358 C 364 368, 354 374, 343 374 C 331 374, 320 367, 315 357 C 309 346, 311 332, 318 325 C 325 319, 335 324, 340 322 Z" fill="black"/>
+          </mask>
+          <mask id="m2"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 268 C 355 262, 374 266, 387 278 C 401 291, 407 311, 404 330 C 401 350, 389 367, 372 374 C 354 382, 332 380, 316 370 C 299 359, 290 339, 292 320 C 294 300, 308 282, 326 274 C 332 271, 337 269, 340 268 Z" fill="black"/>
+          </mask>
+          <mask id="m3"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 208 C 362 200, 390 206, 410 222 C 432 240, 444 268, 442 296 C 440 326, 424 354, 400 368 C 374 384, 341 386, 314 374 C 286 362, 268 336, 264 308 C 260 278, 272 246, 294 226 C 310 210, 328 214, 340 208 Z" fill="black"/>
+          </mask>
+          <mask id="m4"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 150 C 368 140, 402 148, 428 168 C 456 190, 472 224, 472 258 C 472 294, 456 330, 430 352 C 402 376, 364 384, 330 376 C 294 368, 262 344, 246 312 C 228 278, 230 236, 248 204 C 266 170, 302 148, 340 150 Z" fill="black"/>
+          </mask>
+          <mask id="m5"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 92 C 376 80, 420 90, 454 114 C 490 140, 514 180, 518 222 C 522 266, 506 312, 477 346 C 446 382, 400 402, 354 402 C 306 402, 260 380, 232 346 C 202 310, 194 262, 206 220 C 218 176, 248 138, 288 114 C 308 101, 326 96, 340 92 Z" fill="black"/>
+          </mask>
+          <mask id="m6"><rect width="680" height="680" fill="white"/>
+            <path d="M 340 34 C 384 18, 438 30, 480 58 C 526 88, 558 136, 564 188 C 572 244, 553 304, 519 348 C 483 394, 430 422, 374 428 C 316 434, 256 414, 214 374 C 170 332, 150 270, 158 214 C 166 158, 200 106, 248 76 C 278 56, 310 44, 340 34 Z" fill="black"/>
+          </mask>
+        </defs>
+
+        <rect width="680" height="680" fill="url(#bg)"/>
+        <path mask="url(#m6)" d="M 340 14 C 392 0, 454 14, 504 48 C 558 84, 598 140, 608 202 C 620 268, 600 340, 562 396 C 522 454, 462 494, 396 510 C 326 528, 250 514, 192 476 C 132 436, 90 372, 76 304 C 60 232, 78 154, 118 98 C 158 40, 222 6, 290 0 C 308 -2, 326 10, 340 14 Z" fill="url(#g6)"/>
+        <path mask="url(#m5)" d="M 340 72 C 384 58, 434 70, 476 98 C 520 128, 550 176, 558 228 C 568 284, 550 346, 516 390 C 480 436, 428 464, 372 472 C 312 482, 248 466, 200 430 C 150 392, 120 336, 116 278 C 112 218, 134 158, 174 116 C 212 72, 268 54, 322 62 C 330 63, 336 71, 340 72 Z" fill="url(#g5)"/>
+        <path mask="url(#m4)" d="M 340 130 C 376 118, 418 130, 452 154 C 490 180, 514 222, 518 266 C 524 312, 508 362, 476 396 C 442 432, 394 450, 344 450 C 292 450, 242 430, 210 394 C 176 356, 162 304, 168 256 C 174 208, 198 164, 234 138 C 264 114, 306 118, 340 130 Z" fill="url(#g4)"/>
+        <path mask="url(#m3)" d="M 340 188 C 368 176, 404 186, 432 206 C 462 228, 480 262, 482 298 C 486 336, 470 376, 444 402 C 416 430, 378 444, 338 442 C 296 440, 256 424, 230 396 C 202 366, 192 326, 196 288 C 200 250, 218 214, 246 194 C 270 174, 310 182, 340 188 Z" fill="url(#g3)"/>
+        <path mask="url(#m2)" d="M 340 248 C 360 240, 386 248, 406 264 C 428 282, 440 310, 438 338 C 438 368, 424 396, 402 412 C 378 430, 347 434, 318 426 C 288 418, 264 398, 252 372 C 238 344, 240 310, 254 284 C 268 256, 296 242, 326 244 C 332 244, 337 249, 340 248 Z" fill="url(#g2)"/>
+        <path mask="url(#m1)" d="M 340 304 C 350 299, 364 302, 374 312 C 384 322, 388 338, 384 352 C 380 366, 369 376, 355 379 C 340 382, 324 377, 314 366 C 303 354, 301 337, 308 323 C 315 309, 330 306, 340 304 Z" fill="url(#g1)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT INTRO -->
+<section class="about-intro reveal" id="about">
+  <p class="section-label">About Chronicle Edit</p>
+  <div class="rule-accent"><span>✦</span></div>
+  <h2>
+    1,000人超の人生を取材した<span class="br-sp"><br></span>ライターが<br>
+    聴くことで伴走し、<br>
+    「人生の物語」を言葉につむぎます。
+  </h2>
+  <div class="divider"></div>
+  <p>
+    人生の方向を見失いそうになったとき。残された時間を意識し、これからを見つめ直すとき。
+    Chronicle Edit（クロニクル エディット）は、これまでの歩みを丁寧に「聴く」ことで、
+    自分自身では気づいていなかった人生の軸や意味を、言葉として手渡すサービスです。
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="services reveal" id="services">
+  <div class="services-header">
+    <p class="section-label">Services</p>
+    <h2>2つの想いに、<span class="br-sp"><br></span>寄り添うサービス</h2>
+    <p>未来の方向性を整えたい方にも、大切な人へ想いを残したい方にも。<span class="br-sp"><br></span>"これまで"と"これから"を、<span class="br-sp"><br></span>言葉でつなぐ</p>
+  </div>
+
+  <div class="services-grid">
+
+    <!-- 左：キャリア・人生の方向性グループ -->
+    <div class="services-group services-group-left">
+      <p class="services-group-label">
+        <span class="label-en">CAREER &amp; LIFE</span>
+        人生の経験を整理し<br>今後の生き方を整えたい方へ
+      </p>
+      <div class="services-group-cards">
+        <div class="service-card coming-soon">
+          <div class="service-num">01</div>
+          <div class="service-tag">LIFE STORY SESSION</div>
+          <div class="service-title">人生の物語<br>編集会議</div>
+          <p class="service-desc">
+            人生の転機や節目に、過去を振り返り「生きる軸」を言葉で確かめる全2回のセッションです。
+            1,000人超の人生を取材したライターが伴走します。
+          </p>
+          <span class="coming-soon-badge">サービス準備中</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右：想いを残したい方グループ -->
+    <div class="services-group services-group-right">
+      <p class="services-group-label">
+        <span class="label-en">FOR YOUR LOVED ONES</span>
+        人生をふり返り、家族や<br>大切な人へ想いを残したい方へ
+      </p>
+      <div class="services-group-cards">
+        <a class="service-card" href="chronicle-edit-letter.html">
+          <div class="service-num">02</div>
+          <div class="service-tag">LETTER WRITING</div>
+          <div class="service-title">大切な人へ残す<br>人生をつづる手紙</div>
+          <p class="service-desc">
+            大切な人へ。伝えきれなかった想いを、手紙に。インタビューをもとにこれまでの人生を振り返り、一人では言葉にしにくい想いを丁寧に文章ににまとめます。
+          </p>
+          <span class="service-arrow">制作の流れ・料金について</span>
+        </a>
+
+        <a class="service-card" href="chronicle-edit-jibunshi.html">
+          <div class="service-num">03</div>
+          <div class="service-tag">AUTOBIOGRAPHY</div>
+          <div class="service-title">書籍に残す<br>自分史制作</div>
+          <p class="service-desc">
+            これまでの歩みを一冊の本として残す、自分史の制作サービスです。
+            写真中心のアルバムタイプと、言葉で紡ぐ書籍タイプから、ご自身の人生に合った残し方を。
+          </p>
+          <span class="service-arrow">制作の流れ・料金について</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner reveal" id="contact">
+  <div class="cta-banner-content">
+    <h2>まずは、無料相談から。</h2>
+    <p>
+      どんな小さなことでも、<span class="br-sp"><br></span>お気軽にご相談ください。<br>
+      想いやご希望を<span class="br-sp"><br></span>丁寧にうかがいます。
+    </p>
+    <a href="chronicle-edit-contact.html" class="btn-light">無料相談・お問合せ</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Chronicle Edit</div>
+    <ul class="footer-nav">
+      <li><a href="chronicle-edit-about.html">Chronicle Editについて</a></li>
+      <li><a href="#">人生の物語編集会議</a></li>
+      <li><a href="chronicle-edit-letter.html">人生をつづる手紙</a></li>
+      <li><a href="chronicle-edit-jibunshi.html">自分史制作</a></li>
+      <li><a href="chronicle-edit-privacy.html">個人情報保護について</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Chronicle Edit. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const spNav = document.getElementById('spNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    spNav.classList.toggle('open');
+    document.body.style.overflow = spNav.classList.contains('open') ? 'hidden' : '';
+  });
+  // リンククリックでメニューを閉じる
+  spNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      spNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+</body>
+</html>
