@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-48R2VDMKB6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-48R2VDMKB6');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自分への手紙 | Chronicle Edit</title>
+<!-- OGP -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chronicle Edit">
+<meta property="og:title" content="Chronicle Edit｜自分への手紙">
+<meta property="og:description" content="プロのライターとの対話を通じて、これまでの人生を振り返り、「自分への手紙」にまとめてお届けします。コーチングでもカウンセリングでもない、自分と出会い直すためのセッションです。">
+<meta property="og:url" content="https://chronicle-edit.com/myletter.html">
+<meta property="og:image" content="https://chronicle-edit.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F5F0E8;
+    --warm-white: #FAF7F2;
+    --sand: #E8DFD0;
+    --taupe: #C4B49A;
+    --brown: #8B6F47;
+    --dark-brown: #4A3728;
+    --deep: #2C2018;
+    --moss: #7A8C6E;
+    --fog: #B8B0A4;
+    --accent: #A67C52;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif JP', serif;
+    background: var(--warm-white);
+    color: var(--deep);
+    overflow-x: hidden;
+    line-height: 2;
+    font-weight: 400;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(250, 247, 242, 0.88);
+    backdrop-filter: blur(8px);
+    border-bottom: 1.5px solid rgba(139,111,71,0.35);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: var(--dark-brown);
+    text-decoration: none;
+  }
+
+  .nav-logo span {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    color: var(--brown);
+    font-weight: 500;
+    margin-top: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover { color: var(--deep); }
+  .nav-links a.active { color: var(--deep); border-bottom: 1.5px solid var(--brown); padding-bottom: 2px; }
+
+  .nav-cta {
+    font-size: 0.72rem !important;
+    padding: 0.5rem 1.2rem;
+    border: 1.5px solid var(--brown);
+    border-radius: 2px;
+    color: var(--dark-brown) !important;
+    font-weight: 500 !important;
+    transition: background 0.3s, border-color 0.3s !important;
+  }
+
+  .nav-cta:hover { background: var(--sand); border-color: var(--dark-brown); }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    padding: 7rem 3rem 0;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    color: var(--taupe);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .breadcrumb a { color: var(--taupe); text-decoration: none; transition: color 0.3s; }
+  .breadcrumb a:hover { color: var(--brown); }
+  .breadcrumb span { opacity: 0.5; }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 3rem 3rem 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 90% 60%, rgba(196,180,154,0.15) 0%, transparent 70%),
+      var(--warm-white);
+  }
+
+  .page-hero-texture {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      0deg, transparent, transparent 38px,
+      rgba(196,180,154,0.08) 38px, rgba(196,180,154,0.08) 39px
+    );
+  }
+
+  .page-hero-content {
+    position: relative;
+    max-width: 680px;
+    animation: fadeUp 1s ease both;
+    z-index: 2;
+  }
+
+  .page-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--taupe);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .service-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    color: var(--moss);
+    margin-bottom: 1.2rem;
+  }
+
+  .page-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--dark-brown);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .page-lead {
+    font-size: 1.1rem;
+    color: var(--dark-brown);
+    line-height: 2.3;
+    max-width: 560px;
+    border-left: 2.5px solid var(--brown);
+    padding-left: 1.5rem;
+    font-weight: 500;
+  }
+
+  /* 封筒装飾SVG */
+  .envelope-deco {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 260px;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  /* コンパス装飾 */
+  .compass-deco {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ── SECTION BASE ── */
+  .section {
+    padding: 5rem 3rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.4em;
+    color: var(--brown);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .rule-accent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .rule-accent::before, .rule-accent::after {
+    content: '';
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown));
+  }
+  .rule-accent::after {
+    background: linear-gradient(to left, transparent, var(--brown));
+  }
+  .rule-accent span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--brown);
+    letter-spacing: 0.3em;
+  }
+
+  .section h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-bottom: 2rem;
+    letter-spacing: 0.06em;
+    line-height: 1.75;
+  }
+
+  .section p {
+    font-size: 1.1rem;
+    color: var(--deep);
+    line-height: 2.4;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── SAMPLE LAYOUT ── */
+  .sample-image-wrap {
+    text-align: center;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .sample-image-wrap img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+
+  .sample-caption {
+    font-size: 0.9rem;
+    color: var(--brown);
+    margin-top: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── TO WHOM CARDS ── */
+  .whom-section {
+    background: var(--cream);
+    padding: 5rem 3rem;
+    position: relative;
+  }
+
+  .whom-section::before, .whom-section::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown), transparent);
+  }
+
+  .whom-section::before { top: 0; }
+  .whom-section::after { bottom: 0; }
+
+  .whom-inner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .whom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5px;
+    background: rgba(139,111,71,0.35);
+    margin-top: 3rem;
+    border: 1.5px solid rgba(139,111,71,0.35);
+  }
+
+  .whom-item {
+    background: var(--warm-white);
+    padding: 2rem 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    transition: background 0.3s;
+  }
+
+  .whom-item:hover { background: #fff; }
+
+  .whom-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--brown);
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .whom-text {
+    font-size: 1.1rem;
+    color: var(--dark-brown);
+    line-height: 2;
+    font-weight: 500;
+  }
+
+  /* ── FLOW ── */
+  .flow-section {
+    padding: 5rem 3rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .flow-steps {
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  .flow-steps::before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    bottom: 2rem;
+    width: 1.5px;
+    background: linear-gradient(to bottom, var(--brown), transparent);
+  }
+
+  .flow-step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .flow-step:last-child { margin-bottom: 0; }
+
+  .flow-num {
+    width: 4rem;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .flow-num-inner {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: var(--warm-white);
+    border: 1.5px solid var(--brown);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flow-num-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+    color: var(--brown);
+    line-height: 1;
+    font-weight: 600;
+  }
+
+  .flow-num-digit {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--dark-brown);
+    line-height: 1.1;
+  }
+
+  .flow-body { padding-top: 0.8rem; }
+
+  .flow-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.05em;
+  }
+
+  .flow-desc {
+    font-size: 1.1rem;
+    color: var(--deep);
+    line-height: 2.1;
+  }
+
+  .flow-meta {
+    display: inline-block;
+    font-size: 0.97rem;
+    letter-spacing: 0.15em;
+    color: var(--deep);
+    border: 1.5px solid rgba(122,140,110,0.5);
+    padding: 0.2rem 0.7rem;
+    border-radius: 2px;
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  .flow-area {
+    font-size: 0.95rem;
+    color: var(--dark-brown);
+    line-height: 2.1;
+    margin-top: 1rem;
+    padding: 0.9rem 1.2rem;
+    background: rgba(196,180,154,0.15);
+    border-left: 2px solid rgba(139,111,71,0.35);
+  }
+  .price-section {
+    background: var(--dark-brown);
+    padding: 3rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .price-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F5F0E8' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .price-inner {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .price-plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(255,255,255,0.08);
+    margin-bottom: 2rem;
+  }
+
+  .price-plan {
+    padding: 1.8rem 2rem;
+    background: rgba(255,255,255,0.04);
+    text-align: center;
+  }
+
+  .price-plan-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    color: var(--taupe);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+
+  .price-plan-type {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--cream);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .price-label {
+    font-size: 1.1rem;
+    letter-spacing: 0.4em;
+    color: var(--taupe);
+    margin-bottom: 1.2rem;
+  }
+
+  .price-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+  }
+
+  .price-tax {
+    font-size: 1.1rem;
+    color: var(--taupe);
+    letter-spacing: 0.15em;
+    margin-bottom: 0;
+  }
+
+  .price-notes {
+    text-align: left;
+    border-top: 1.5px solid rgba(196,180,154,0.3);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .price-notes p {
+    font-size: 1.1rem;
+    color: var(--fog);
+    line-height: 2;
+    letter-spacing: 0.05em;
+  }
+
+  .price-notes p::before {
+    content: '・';
+    margin-right: 0.3em;
+    color: var(--taupe);
+  }
+
+  /* ── NOTE BOX ── */
+  .note-box {
+    background: rgba(196,180,154,0.15);
+    border: 1.5px solid rgba(139,111,71,0.3);
+    border-radius: 2px;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: var(--dark-brown);
+    line-height: 2;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding: 6rem 3rem;
+    text-align: center;
+    background: var(--cream);
+    position: relative;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--brown), transparent);
+  }
+
+  .cta-section h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 500;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+  }
+
+  .cta-section p {
+    font-size: 1.1rem;
+    color: var(--deep);
+    margin-bottom: 2.5rem;
+    line-height: 2.2;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.9rem 2.8rem;
+    background: var(--dark-brown);
+    color: var(--cream);
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.3s, transform 0.2s;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .btn-primary:hover {
+    background: var(--deep);
+    transform: translateY(-1px);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--deep);
+    padding: 3rem;
+    color: var(--fog);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: 0.2em;
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  .footer-nav a {
+    color: var(--fog);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-nav a:hover { color: var(--cream); }
+
+  .footer-copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.72rem;
+    color: rgba(184,176,164,0.7);
+    letter-spacing: 0.2em;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .breadcrumb, .page-hero { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .envelope-deco { display: none; }
+    .section, .flow-section { padding: 4rem 1.5rem; }
+    .whom-section { padding: 4rem 1.5rem; }
+    .whom-grid { grid-template-columns: 1fr; }
+    .price-plans { grid-template-columns: 1fr; }
+    .price-section, .cta-section { padding: 4rem 1.5rem; }
+    footer { padding: 2rem 1.5rem; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ── HAMBURGER MENU ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--dark-brown);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .sp-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(250,247,242,0.97);
+    backdrop-filter: blur(12px);
+    z-index: 150;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sp-nav.open {
+    display: flex;
+    opacity: 1;
+  }
+
+  .sp-nav ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  .sp-nav ul li {
+    border-bottom: 1px solid rgba(139,111,71,0.15);
+  }
+
+  .sp-nav ul li:first-child {
+    border-top: 1px solid rgba(139,111,71,0.15);
+  }
+
+  .sp-nav ul li a {
+    display: block;
+    padding: 1.4rem 3rem;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .sp-nav ul li a:hover { color: var(--brown); }
+
+  .sp-nav .sp-nav-cta {
+    margin-top: 2rem;
+  }
+
+  .sp-nav .sp-nav-cta a {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    border: 1.5px solid var(--brown);
+    border-radius: 2px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.0rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+
+  .sp-nav .sp-nav-cta a:hover { background: var(--sand); }
+
+  .sp-nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    color: var(--dark-brown);
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+  }
+
+  /* スマホのみ改行 */
+  .br-sp { display: none; }
+  @media (max-width: 900px) {
+    .br-sp { display: inline; }
+  }
+
+  .nav-coming-soon {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--taupe);
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+  }
+
+  .nav-coming-badge {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--brown);
+    border: 1px solid var(--taupe);
+    padding: 1px 5px;
+    border-radius: 2px;
+    line-height: 1.6;
+  }
+
+  .footer-coming-soon {
+    color: var(--fog);
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+  }
+
+  .footer-coming-badge {
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    color: rgba(184,176,164,0.7);
+    border: 1px solid rgba(184,176,164,0.35);
+    padding: 1px 4px;
+    border-radius: 2px;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    Chronicle Edit
+    <span>クロニクル エディット</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">Chronicle Editについて</a></li>
+    <li><a href="myletter.html" class="active">自分への手紙</a></li>
+    <li><a href="letter.html">大切な人への手紙</a></li>
+    <li><a href="jibunshi.html">自分史制作</a></li>
+    <li><a href="contact.html" class="nav-cta">無料相談・お問合せ</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="sp-nav" id="spNav">
+  <div class="sp-nav-logo">Chronicle Edit</div>
+  <ul>
+    <li><a href="about.html">Chronicle Editについて</a></li>
+    <li><a href="myletter.html" style="color:var(--brown);">自分への手紙</a></li>
+    <li><a href="letter.html">大切な人への手紙</a></li>
+    <li><a href="jibunshi.html">自分史制作</a></li>
+  </ul>
+  <div class="sp-nav-cta">
+    <a href="contact.html">無料相談・お問合せ</a>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">ホーム</a>
+  <span>›</span>
+  <span>自分への手紙</span>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-texture"></div>
+
+  <!-- コンパス装飾 -->
+  <svg class="compass-deco" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="100" cy="100" r="86" stroke="#8B6F47" stroke-width="1.2"/>
+    <circle cx="100" cy="100" r="60" stroke="#8B6F47" stroke-width="0.8" opacity="0.6"/>
+    <circle cx="100" cy="100" r="3.5" fill="#8B6F47"/>
+    <!-- cardinal ticks -->
+    <line x1="100" y1="14" x2="100" y2="30" stroke="#8B6F47" stroke-width="1.2"/>
+    <line x1="100" y1="170" x2="100" y2="186" stroke="#8B6F47" stroke-width="1.2"/>
+    <line x1="14" y1="100" x2="30" y2="100" stroke="#8B6F47" stroke-width="1.2"/>
+    <line x1="170" y1="100" x2="186" y2="100" stroke="#8B6F47" stroke-width="1.2"/>
+    <line x1="41" y1="41" x2="52" y2="52" stroke="#8B6F47" stroke-width="0.7" opacity="0.5"/>
+    <line x1="159" y1="41" x2="148" y2="52" stroke="#8B6F47" stroke-width="0.7" opacity="0.5"/>
+    <line x1="41" y1="159" x2="52" y2="148" stroke="#8B6F47" stroke-width="0.7" opacity="0.5"/>
+    <line x1="159" y1="159" x2="148" y2="148" stroke="#8B6F47" stroke-width="0.7" opacity="0.5"/>
+    <!-- needle -->
+    <path d="M100 40 L109 100 L100 160 L91 100 Z" stroke="#8B6F47" stroke-width="1" fill="none" opacity="0.75"/>
+    <path d="M100 40 L109 100 L100 100 Z" fill="#8B6F47" opacity="0.5"/>
+  </svg>
+
+  <div class="page-hero-content">
+    <span class="page-eyebrow">a letter to myself</span>
+    <p class="service-label">ROLE-LETTERING SESSION</p>
+    <h1 class="page-title">
+      自分への手紙
+    </h1>
+    <p class="page-lead">
+      ライターとの対話を通じて自分自身と向き合い、<br>自分に宛てた言葉を受け取る、投函しない手紙。<br>
+      コーチングでもカウンセリングでもない、<br>自分と出会い直すためのセッションです。
+    </p>
+  </div>
+</section>
+
+<!-- INTRO TEXT -->
+<section class="section reveal">
+  <p class="section-label">About this service</p>
+  <div class="rule-accent"><span>✦</span></div>
+  <p>
+    たとえば、職場や家庭での転機や節目。慣れ親しんだ環境や役割を手放す「終わり」が近づき、次の方向がまだ見えないとき、人は長いトンネルに入ったような感覚に陥ります。心理学者ウィリアム・ブリッジスは、この期間を「ニュートラルゾーン」と名づけ、乗り越えるための有効な方法の一つとして、自分のこれまでの歩みを振り返る時間を持つことを推奨しています。
+  </p>
+  <p>
+    けれど、ひとりで振り返るのは難しいもの。「自分への手紙」では、これまで1,000人超の人生を取材したライターとの対話を通じて、まだ言葉になっていない人生の物語に光をあて、これからの自分に向けた一通の手紙として言葉を受け取ります。コーチングでもカウンセリングでもない、自分と出会い直すためのセッションです。
+  </p>
+<div class="note-box" style="margin-top:2rem;">
+    「自分への手紙」は便箋一枚ほどの短い文章ではなく、これまでの道のりで大切にしてきたことを確かめる「あなたの人生の物語」です。<br>
+    <span style="font-size:0.95rem;color:var(--brown);letter-spacing:0.05em;">文章量の目安：A4判 約3枚／2,000〜2,500字</span>
+  </div>
+</section>
+
+<!-- SUCH MOMENTS -->
+<section class="whom-section reveal">
+  <div class="whom-inner">
+    <p class="section-label" style="text-align:center;">Who is this for</p>
+    <h2 style="font-family:'Shippori Mincho',serif; font-size:clamp(1.3rem,2.5vw,1.7rem); font-weight:500; color:var(--dark-brown); text-align:center; letter-spacing:0.06em; line-height:1.8;">
+      こんな転機・節目にある方へ
+    </h2>
+    <div class="whom-grid">
+      <div class="whom-item">
+        <div class="whom-icon">✦</div>
+        <div class="whom-text">役職定年や定年退職を迎えるにあたり、これからの生き方を考えたい方。</div>
+      </div>
+      <div class="whom-item">
+        <div class="whom-icon">✦</div>
+        <div class="whom-text">転職や独立など、新しい一歩を踏み出す前に、自分を整理したい方。</div>
+      </div>
+      <div class="whom-item">
+        <div class="whom-icon">✦</div>
+        <div class="whom-text">子育てが一段落し、これからの自分の時間を考えたい方。</div>
+      </div>
+      <div class="whom-item">
+        <div class="whom-icon">✦</div>
+        <div class="whom-text">還暦・古希など、人生の節目を迎え、これまでを整えたい方。</div>
+      </div>
+      <div class="whom-item">
+        <div class="whom-icon">✦</div>
+        <div class="whom-text">大きな決断を前にして、あらためて自分を見つめたい方。</div>
+      </div>
+      <div class="whom-item">
+        <div class="whom-icon">✦</div>
+        <div class="whom-text">漠然とした不安があり、これまでの自分を整理したい方。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE -->
+<section class="section reveal">
+  <p class="section-label">Sample</p>
+  <div class="rule-accent"><span>✦</span></div>
+  <h2>お手紙のサンプル(抜粋)</h2>
+  <p>
+    語っていただいたエピソードをもとに「私からあなたへ」と、語りかけの形で構成しています。<br>
+    <span style="font-size:0.95rem;color:var(--brown);letter-spacing:0.05em;">※ご本人様のご了承を得て、一部を抜粋してご紹介しています。</span>
+  </p>
+
+  <div class="sample-image-wrap">
+    <img src="sample-myletter.png" alt="「自分への手紙」のサンプルイメージ">
+    <!--　<p class="sample-caption">文章量の目安：・PDFまたはWord形式）</p>-->
+  </div>
+<!--
+  <div class="note-box" style="font-family:'Shippori Mincho',serif; font-size:1.05rem; line-height:2.3; color:var(--dark-brown); margin-top:0;">
+    55歳の私へ<br><br>
+    改めてこれまでの道のりを振り返りながら、いま、私は自分自身に、55歳のあなたにこの手紙を書いています。<br><br>
+    ……（中略）……<br><br>
+    ここからは少し力を抜いて、もう肩の荷を下ろしちゃってもいいのかな。55歳の現在地から見える景色を、あなたはこう話してくれました。そして、肩の荷を下ろしたあとに生まれた心の空間を、「空っぽ」と表現しました。この空間も、あなたが歩いてきた人生の大切な続き。それは、これからどのような場所になっていくのでしょうか。
+  </div>
+-->
+  <p style="font-size:0.95rem;color:var(--brown);margin-top:1.5rem;">
+    ※実際の手紙は、PDFまたはワード（Word）形式でお届けします。上記はその一部を抜粋したものです。
+  </p>
+</section>
+
+<!-- CUSTOMER VOICE -->
+<section class="section reveal">
+  <p class="section-label">User's voice</p>
+  <div class="rule-accent"><span>✦</span></div>
+  <h2>ご利用者様の声</h2>
+  <div class="note-box" style="font-size:1.05rem;">
+    50歳を過ぎた頃から、自分の生き方に漠然とした不安を感じていました。個人情報保護・守秘義務の説明もあり、安心して話せた対話セッションの後、届いた手紙を何度も読み返すうちに、悔やんでいた過去の選択を前向きに肯定できるようになりました。過去の見方が変わったことで、負の呪縛から解放された気がします。それが何よりもうれしい。おかげでまた新たな仕事にチャレンジする気になれました。50代後半の人生の歩みも見える化したいので、数年後にまた対話をお願いするつもりです。ありがとうございました。
+    <p style="text-align:right;margin-top:1rem;margin-bottom:0;font-size:0.95rem;color:var(--brown);">55歳・男性　会社員の方</p>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow-section reveal">
+  <p class="section-label">Flow</p>
+  <div class="rule-accent"><span>✦</span></div>
+  <h2>「自分への手紙」の<span class="br-sp"><br></span>セッションの流れ</h2>
+
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">01</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">無料相談・ヒアリング</div>
+        <p class="flow-desc">
+          「自分への手紙」に関心を持っていただいたきっかけや思い、ご不安なことなどを丁寧にうかがいます。
+        </p>
+        <span class="flow-meta">電話・オンライン</span>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">02</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">事前シート記入</div>
+        <p class="flow-desc">
+          これまでの人生を振り返るための事前シートにご記入いただきます。問いに答える時間もまた、ご自身の人生に目を向ける大切な時間です。
+        </p>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">03</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">対話セッション</div>
+        <p class="flow-desc">
+          事前シートをもとに、これまでの人生についてお話をうかがいます。語りながら、まだ言葉になっていない思いや、これまでとは違う人生の見え方にも目を向けていきます。
+        </p>
+        <span class="flow-meta">90〜120分 ／ 対面（※）・オンライン</span>
+        <p class="flow-area">
+          ※ 対面での対応は東京都・神奈川県東部・千葉県西部が対象となります。それ以遠の場合はオンラインまたは出張対応（費用別途）をご相談ください。
+        </p>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">04</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">文章校正</div>
+        <p class="flow-desc">
+          対話をもとに、ライターが「自分への手紙」として文章にまとめます（2,000〜2,500文字目安）。完成した原稿をPDFでお送りし、内容や表現をご確認いただきます。
+        </p>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-num">
+        <div class="flow-num-inner">
+          <span class="flow-num-label">STEP</span>
+          <span class="flow-num-digit">05</span>
+        </div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-title">手紙完成・納品</div>
+        <p class="flow-desc">
+          お手紙の完成版を、WordまたはPDF形式でお送りいたします。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    ※ 筆耕サービスではないため便箋等への直筆での代筆は承っておりません。ご了承ください。
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price-section reveal">
+  <div class="price-inner">
+    <p class="price-label">PRICE</p>
+    <p style="font-size:0.95rem;color:var(--taupe);line-height:2;margin-bottom:0.5rem;letter-spacing:0.05em;text-align:center;">
+      文章量の目安：2,000〜2,500字
+    </p>
+
+    <p style="font-size:1.25rem;color:var(--taupe);line-height:2;margin-bottom:1.5rem;letter-spacing:0.05em;text-align:center;">
+      サイトオープンにあたり、<span class="br-sp"><br></span>「自分への手紙」を<br>モニター価格でご提供いたします。
+    </p>
+
+    <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:2px;padding:1rem 1.5rem;margin-bottom:2rem;font-size:1.1rem;color:rgba(255,255,255,0.65);line-height:2;text-align:center;">
+      ※ ご感想の提供にご協力ください。
+    </div>
+
+    <div class="price-plans">
+      <!-- 対面 -->
+      <div class="price-plan">
+        <p class="price-plan-label">IN PERSON</p>
+        <p class="price-plan-type">対面<br>セッション</p>
+        <div style="margin-bottom:0.5rem;">
+          <p style="font-size:1.1rem;letter-spacing:0.2em;color:rgba(255,255,255,0.4);margin-bottom:3px;">定　価</p>
+          <p style="font-size:1.25rem;color:rgba(255,255,255,0.45);text-decoration:line-through;">30,000円（税込）</p>
+        </div>
+        <div>
+          <p style="font-size:1.1rem;letter-spacing:0.2em;color:rgba(230,185,100,0.9);margin-bottom:3px;">モニター価格</p>
+          <div class="price-amount" style="font-size:2.4rem;">15,000<span style="font-size:1.1rem;color:rgba(230,185,100,0.8);">円（税込）</span></div>
+        </div>
+        <p class="price-tax" style="margin-top:0.5rem;">交通費込み</p>
+      </div>
+      <!-- オンライン -->
+      <div class="price-plan">
+        <p class="price-plan-label">ONLINE</p>
+        <p class="price-plan-type">電話・オンライン<br>セッション</p>
+        <div style="margin-bottom:0.5rem;">
+          <p style="font-size:1.1rem;letter-spacing:0.2em;color:rgba(255,255,255,0.4);margin-bottom:3px;">定　価</p>
+          <p style="font-size:1.25rem;color:rgba(255,255,255,0.45);text-decoration:line-through;">25,000円（税込）</p>
+        </div>
+        <div>
+          <p style="font-size:1.1rem;letter-spacing:0.2em;color:rgba(230,185,100,0.9);margin-bottom:3px;">モニター価格</p>
+          <div class="price-amount" style="font-size:2.4rem;">12,000<span style="font-size:1.1rem;color:rgba(230,185,100,0.8);">円（税込）</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-notes">
+      <p>納品はWordまたはPDF形式です。便箋等への直筆・製本はございません。</p>
+      <p>対面対応エリア：東京都・神奈川県東部・千葉県西部。それ以遠は出張対応（費用別途）をご相談ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section reveal" id="contact">
+  <h2>まずは、無料相談から。</h2>
+  <p>
+    どんな小さなことでも、<span class="br-sp"><br></span>お気軽にご相談ください。<br>
+    人生を振り返ることへの想いを、<span class="br-sp"><br></span>丁寧にうかがいます。
+  </p>
+  <a href="contact.html" class="btn-primary">無料相談・お問合せ</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Chronicle Edit</div>
+    <ul class="footer-nav">
+      <li><a href="about.html">Chronicle Editについて</a></li>
+      <li><a href="myletter.html">自分への手紙</a></li>
+      <li><a href="letter.html">人生をつづる手紙</a></li>
+      <li><a href="jibunshi.html">自分史制作</a></li>
+      <li><a href="privacy.html">個人情報保護について</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Chronicle Edit. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const spNav = document.getElementById('spNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    spNav.classList.toggle('open');
+    document.body.style.overflow = spNav.classList.contains('open') ? 'hidden' : '';
+  });
+  // リンククリックでメニューを閉じる
+  spNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      spNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+</body>
+</html>
