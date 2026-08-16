@@ -12,6 +12,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>自分史制作 | Chronicle Edit</title>
+<!-- OGP -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chronicle Edit">
+<meta property="og:title" content="Chronicle Edit｜人生の物語を、言葉につむぐ">
+<meta property="og:description" content="「聴くこと」と「書くこと」で、人生という物語の編集をお手伝いします。自分への手紙・大切な人への手紙・自分史制作。">
+<meta property="og:url" content="https://chronicle-edit.com/">
+<meta property="og:image" content="https://chronicle-edit.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
@@ -532,7 +541,7 @@
 
   .guide-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     margin-bottom: 3rem;
   }
@@ -995,8 +1004,8 @@
   </a>
   <ul class="nav-links">
     <li><a href="about.html">Chronicle Editについて</a></li>
-    <li><span class="nav-coming-soon">人生の物語編集会議<span class="nav-coming-badge">準備中</span></span></li>
-    <li><a href="letter.html">人生をつづる手紙</a></li>
+    <li><a href="myletter.html">自分への手紙</a></li>
+    <li><a href="letter.html">大切な人への手紙</a></li>
     <li><a href="jibunshi.html" class="active">自分史制作</a></li>
     <li><a href="contact.html" class="nav-cta">無料相談・お問合せ</a></li>
   </ul>
@@ -1008,8 +1017,8 @@
   <div class="sp-nav-logo">Chronicle Edit</div>
   <ul>
     <li><a href="about.html">Chronicle Editについて</a></li>
-    <li><span class="nav-coming-soon">人生の物語編集会議<span class="nav-coming-badge">準備中</span></span></li>
-    <li><a href="letter.html">人生をつづる手紙</a></li>
+    <li><a href="myletter.html">自分への手紙</a></li>
+    <li><a href="letter.html">大切な人への手紙</a></li>
     <li><a href="jibunshi.html" style="color:var(--brown);">自分史制作</a></li>
   </ul>
   <div class="sp-nav-cta">
@@ -1061,8 +1070,81 @@
   <p style="font-weight:700;color:var(--dark-brown);">あなたの人生に合った、残し方を</p>
   <h2>自分史のスタイルとプランを選ぶ</h2>
 
+  <!-- PDFタイプ -->
+  <div class="types-grid-book">
+    <div class="type-card type-card-full">
+      <div>
+        <p class="type-badge">PDF TYPE</p>
+        <h3 style="font-size:1.5rem;">
+          <small>手軽に、想いを残す</small>
+          PDFタイプ自分史
+        </h3>
+        <div class="price-block" style="margin-top:1.5rem;">
+          <div class="price-main">128,000<span>円（税込）〜</span></div>
+          <ul class="spec-list">
+            <li>PDF（Word）形式</li>
+            <li>5,000〜8,000字相当</li>
+            <li>取材1回</li>
+            <li>写真挿入 約10枚</li>
+            <li>印刷・製本なし</li>
+          </ul>
+          <p style="font-size:0.88rem;color:var(--brown);line-height:2;margin-top:0.8rem;">※ 取材回数や文字量によって料金は異なります。詳しくはお問合せください。</p>
+          <p style="font-size:0.88rem;color:var(--brown);line-height:2;margin-top:0.8rem;">※ エリアによって交通費実費・出張費をいただく場合がございます。</p>
+        </div>
+        <a href="contact.html" class="type-link" style="margin-top:1rem;display:inline-flex;">詳しく相談する</a>
+      </div>
+      <div>
+        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">「立派に製本しなくていい。ただ、人生を言葉として残しておきたい」。そんな想いに応える、印刷・製本を伴わないシンプルな自分史のかたちです。</p>
+
+        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">プロのライターによるインタビューをもとに、あなたの人生を一つの物語として言葉につむぎます。仕上がりはPDF（Word）データでのお届けなので、印刷・製本にかかる時間や費用を抑えられます。</p>
+
+        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">ご自宅のプリンターで印刷したり、ご家族にデータのまま共有したり。残し方は、受け取った後にご自身で自由に選んでいただけます。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 書籍タイプ -->
+  <div class="types-grid-book" style="margin-top:2rem;">
+    <div class="type-card type-card-full">
+      <div>
+        <p class="type-badge">BOOK TYPE</p>
+        <h3 style="font-size:1.5rem;">
+          <small>言葉でつづる</small>
+          書籍タイプ自分史
+        </h3>
+        <div class="price-block" style="margin-top:1.5rem;">
+          <div class="price-main">280,000<span>円（税込）〜</span></div>
+          <ul class="spec-list">
+            <li>ソフトカバーB6サイズ</li>
+            <li>100ページ（1万5000字相当）</li>
+            <li>取材1回</li>
+            <li>印刷 3部</li>
+            <li>写真約20枚</li>
+            <!-- <li>取材・執筆・製本印刷費込み</li> -->
+          </ul>
+          <p style="font-size:0.88rem;color:var(--brown);line-height:2;margin-top:0.8rem;">※ 取材回数や文字量（ページ数）、製本形態、部数によって料金は異なります。</p>
+          <p style="font-size:0.88rem;color:var(--brown);line-height:2;margin-top:0.8rem;">※ エリアによって交通費実費・出張費をいただく場合がございます。</p>
+        </div>
+        <a href="contact.html" class="type-link" style="margin-top:1rem;display:inline-flex;">詳しく相談する</a>
+      </div>
+      <div>
+        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">プロのライターによるインタビューをもとに、あなたの人生をひとつの物語として丁寧に綴り、一冊の書籍に仕上げます。</p>
+
+        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">一人で振り返るだけでは見えてこなかった想いや記憶も、対話を重ねる中で少しずつ輪郭を帯びていきます。うまくいかなかったでき事や、遠回りに思える時間にも、大切な意味やつながりが見えてくることがあります。</p>
+
+        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">自分史づくりは、本を残すためだけのものではありません。これまでの人生を「これでよかった」と受け取り直し、ここから先を、自分らしく歩んでいくための時間でもあります。</p>
+        <!-- 
+        <ul class="price-notes" style="margin-top:1.2rem;">
+          <li>取材回数や文字量（ページ数）、製本形態、部数によって料金は異なります。</li>
+          <li>詳しくはぜひ、お問合せください。</li>
+        </ul>
+        -->
+      </div>
+    </div>
+  </div>
+
   <!-- アルバム形式 3プラン -->
-  <div class="album-section-header">
+  <div class="album-section-header" style="margin-top:2rem;">
     <p class="type-badge">ALBUM TYPE</p>
     <h3 style="font-size:1.5rem;">
       <small>写真や年表でたどる</small>
@@ -1136,41 +1218,6 @@
 
   </div>
 
-  <!-- 書籍タイプ -->
-  <div class="types-grid-book" style="margin-top:2rem;">
-    <div class="type-card type-card-full">
-      <div>
-        <p class="type-badge">BOOK TYPE</p>
-        <h3 style="font-size:1.5rem;">
-          <small>言葉でつづる</small>
-          書籍タイプ自分史
-        </h3>
-        <div class="price-block" style="margin-top:1.5rem;">
-          <div class="price-main">250,000<span>円（税込）〜</span></div>
-          <ul class="spec-list">
-            <li>ソフトカバーB6サイズ・100ページ（1万5000字相当）</li>
-            <li>印刷：3部</li>
-            <li>写真約20枚</li>
-            <li>取材・執筆・製本印刷費込み</li>
-          </ul>
-          <p style="font-size:0.88rem;color:var(--brown);line-height:2;margin-top:0.8rem;">※ 取材の交通費：エリアによって交通費実費・出張費をいただく場合がございます。詳しくはお問合せください。</p>
-        </div>
-        <a href="contact.html" class="type-link" style="margin-top:1rem;display:inline-flex;">詳しく相談する</a>
-      </div>
-      <div>
-        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">プロのライターによるインタビューをもとに、あなたの人生をひとつの物語として丁寧に綴り、一冊の書籍に仕上げます。</p>
-
-        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">一人で振り返るだけでは見えてこなかった想いや記憶も、対話を重ねる中で少しずつ輪郭を帯びていきます。うまくいかなかったでき事や、遠回りに思える時間にも、大切な意味やつながりが見えてくることがあります。</p>
-
-        <p style="font-size:1.1rem;color:var(--deep);line-height:2.4;">自分史づくりは、本を残すためだけのものではありません。これまでの人生を「これでよかった」と受け取り直し、ここから先を、自分らしく歩んでいくための時間でもあります。</p>
-        <ul class="price-notes" style="margin-top:1.2rem;">
-          <li>製本形態やページ数、部数によって料金は異なります。</li>
-          <li>詳しくはぜひ、お問合せください。</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
   </div><!-- /types-section-inner -->
 </section>
 
@@ -1183,12 +1230,16 @@
 
     <div class="guide-grid">
       <div class="guide-item">
-        <p class="guide-type">アルバム形式がおすすめ</p>
-        <p>写真を見ながら、これまでの時間を自然に振り返りたい方。視覚的なにぎわいとともに、大切な人と一緒にページをめくれる一冊を残したい方に。</p>
+        <p class="guide-type">PDFタイプがおすすめ</p>
+        <p>印刷や製本にこだわらず、まずは人生を言葉として形に残したい方。費用を抑えて、気軽に自分史づくりを始めたい方に。</p>
       </div>
       <div class="guide-item">
         <p class="guide-type">書籍タイプがおすすめ</p>
         <p>出来事の意味やご自身の想いを、言葉でじっくり整理したい方。プロのライターとの対話を通じて、自分の人生を物語として深く掘り下げたい方に。</p>
+      </div>
+      <div class="guide-item">
+        <p class="guide-type">アルバム形式がおすすめ</p>
+        <p>写真を見ながら、これまでの時間を自然に振り返りたい方。視覚的なにぎわいとともに、大切な人と一緒にページをめくれる一冊を残したい方に。</p>
       </div>
     </div>
 
@@ -1279,9 +1330,9 @@
       <div class="flow-body">
         <div class="flow-title">執筆・編集</div>
         <p class="flow-desc">
-          うかがったお話をもとに、文章・誌面レイアウト作成を行います。丁寧に作成させていただくために、約６週間の制作期間をいただいております（お急ぎの場合は、別途ご相談ください）。
+          うかがったお話をもとに、文章・誌面レイアウト作成を行います。丁寧に作成させていただくために、約６～８週間の制作期間をいただいております（制作内容やページ数により変動いたします。お急ぎの場合はご相談ください）。
         </p>
-        <span class="flow-meta">制作期間：約６週間</span>
+        <span class="flow-meta">制作期間：約６～８週間</span>
       </div>
     </div>
 
@@ -1338,8 +1389,8 @@
     <div class="footer-logo">Chronicle Edit</div>
     <ul class="footer-nav">
       <li><a href="about.html">Chronicle Editについて</a></li>
-      <li><span class="nav-coming-soon">人生の物語編集会議<span class="nav-coming-badge">準備中</span></span></li>
-      <li><a href="letter.html">人生をつづる手紙</a></li>
+      <li><a href="myletter.html">自分への手紙</a></li>
+      <li><a href="letter.html">大切な人への手紙</a></li>
       <li><a href="jibunshi.html">自分史制作</a></li>
       <li><a href="privacy.html">個人情報保護について</a></li>
     </ul>
